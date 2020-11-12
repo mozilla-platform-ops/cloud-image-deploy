@@ -41,7 +41,7 @@ it is important to note that changes made by this application to taskcluster wor
       worker-manager:manage-worker-pool:gecko-t/win*
       worker-manager:provider:azure
       ```
-* create `config/taskcluster-client-options`.yml using `config/taskcluster-client-options-example.yml` as a template
+* create `config/taskcluster-client-options.yml` using `config/taskcluster-client-options-example.yml` as a template
 
 ### usage
 ```

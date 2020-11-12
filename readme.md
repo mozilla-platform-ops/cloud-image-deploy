@@ -23,7 +23,7 @@ it is important to note that changes made by this application to taskcluster wor
   pip3 install --user taskcluster pyyaml
   ```
 
-### configure
+### configuration
 
 * create or modify a worker pool definition in the config folder. pool definition config paths use the convention: `config/$environment/$domain/$pool.yml`
 * modify `config/deploy-on-push.yml` to include only the pool definitions you wish to update. **take extra care here**. changes here can overwrite other peoples efforts and modify production worker pools. take care to only include pool definitions you are responsible for and remove or comment all other pool ids.

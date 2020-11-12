@@ -38,6 +38,8 @@ it is important to note that changes made by this application to taskcluster wor
       ```
   * for example:
       ```
+      worker-manager:manage-worker-pool:gecko-1/win*
+      worker-manager:manage-worker-pool:gecko-3/win*
       worker-manager:manage-worker-pool:gecko-t/win*
       worker-manager:provider:azure
       ```

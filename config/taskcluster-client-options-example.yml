@@ -1,0 +1,19 @@
+---
+production:
+    rootUrl: https://firefox-ci-tc.services.mozilla.com
+    credentials:
+        clientId: project/relops/image-deploy/dev
+        accessToken: accessToken for production client goes here
+staging:
+    rootUrl: https://stage.taskcluster.nonprod.cloudops.mozgcp.net
+    credentials:
+        clientId: project/relops/image-deploy/dev
+        accessToken: accessToken for staging client goes here
+
+# required client scopes include:
+# worker-manager:manage-worker-pool:pool-id(s)
+# worker-manager:provider:provider-id(s)
+
+# for example:
+# worker-manager:manage-worker-pool:gecko-t/win*
+# worker-manager:provider:azure

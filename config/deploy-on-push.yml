@@ -1,0 +1,13 @@
+---
+production:
+    gecko-t:
+        # - win10-64-azure
+        - win10-64-gpu-azure
+        - win7-32-azure
+        - win7-32-gpu-azure
+staging:
+    gecko-t:
+        # - win10-64-azure
+        - win10-64-gpu-azure
+        - win7-32-azure
+        - win7-32-gpu-azure

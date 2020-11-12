@@ -30,6 +30,17 @@ it is important to note that changes made by this application to taskcluster wor
 * create taskcluster clients for each environment you will deploy to
   * [production](https://firefox-ci-tc.services.mozilla.com/auth/clients)
   * [staging](https://stage.taskcluster.nonprod.cloudops.mozgcp.net/auth/clients)
+* add scopes to the new clients
+  * required client scopes include:
+      ```
+      worker-manager:manage-worker-pool:pool-id(s)
+      worker-manager:provider:provider-id(s)
+      ```
+  * for example:
+      ```
+      worker-manager:manage-worker-pool:gecko-t/win*
+      worker-manager:provider:azure
+      ```
 * create `config/taskcluster-client-options`.yml using `config/taskcluster-client-options-example.yml` as a template
 
 ### usage

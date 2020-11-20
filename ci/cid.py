@@ -3,12 +3,32 @@ import taskcluster.exceptions
 from datetime import datetime, timedelta
 
 
-def updateRole(auth, configPath, roleId):
+def updateClient(authClient, configPath, clientId):
+    with open(configPath, 'r') as stream:
+        payload = yaml.safe_load(stream)
+        client = None
+        try:
+            client = authClient.client(clientId=clientId)
+            print('info: client {} existence detected'.format(clientId))
+        except taskcluster.exceptions.TaskclusterRestFailure as tcRestFailure:
+            if tcRestFailure.status_code == 404:
+                client = None
+                print('info: client {} absence detected'.format(clientId))
+            else:
+                raise
+        if client:
+            authClient.updateClient(clientId, payload)
+            print('info: client {} updated'.format(clientId))
+        else:
+            authClient.createClient(clientId, payload)
+            print('info: client {} created'.format(clientId))
+
+def updateRole(authClient, configPath, roleId):
     with open(configPath, 'r') as stream:
         payload = yaml.safe_load(stream)
         role = None
         try:
-            role = auth.role(roleId=roleId)
+            role = authClient.role(roleId=roleId)
             print('info: role {} existence detected'.format(roleId))
         except taskcluster.exceptions.TaskclusterRestFailure as tcRestFailure:
             if tcRestFailure.status_code == 404:
@@ -16,36 +36,33 @@ def updateRole(auth, configPath, roleId):
                 print('info: role {} absence detected'.format(roleId))
             else:
                 raise
-
         if role:
-            auth.updateRole(roleId, payload)
+            authClient.updateRole(roleId, payload)
             print('info: role {} updated'.format(roleId))
         else:
-            auth.createRole(roleId, payload)
+            authClient.createRole(roleId, payload)
             print('info: role {} created'.format(roleId))
 
-
-def updateWorkerPool(workerManager, configPath, workerPoolId):
+def updateWorkerPool(workerManagerClient, configPath, workerPoolId):
     with open(configPath, 'r') as stream:
         payload = yaml.safe_load(stream)
         try:
-            workerManager.workerPool(workerPoolId=workerPoolId)
+            workerManagerClient.workerPool(workerPoolId=workerPoolId)
             print('info: worker pool {} existence detected'.format(
                 workerPoolId))
-            workerManager.updateWorkerPool(workerPoolId, payload)
+            workerManagerClient.updateWorkerPool(workerPoolId, payload)
             print('info: worker pool {} updated'.format(workerPoolId))
         except taskcluster.exceptions.TaskclusterRestFailure as tcRestFailure:
             if tcRestFailure.status_code == 404:
                 print('info: worker pool {} absence detected'.format(
                     workerPoolId))
-                workerManager.createWorkerPool(workerPoolId, payload)
+                workerManagerClient.createWorkerPool(workerPoolId, payload)
                 print('info: worker pool {} created'.format(workerPoolId))
             else:
                 raise
 
-
 def createTask(
-        queue,
+        queueClient,
         taskId,
         taskName,
         taskDescription,
@@ -108,7 +125,6 @@ def createTask(
         payload['payload']['onExitStatus'] = {
             'retry': retriggerOnExitCodes
         }
-
-    queue.createTask(taskId, payload)
+    queueClient.createTask(taskId, payload)
     print('info: task {} ({}: {}), created with priority: {}'.format(
         taskId, taskName, taskDescription, priority))

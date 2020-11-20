@@ -25,7 +25,7 @@ it is important to note that changes made by this application to taskcluster wor
 
 ### configuration
 
-* create or modify a worker pool definition in the config folder. pool definition config paths use the convention: `config/$environment/$domain/$pool.yml`
+* create or modify a worker pool definition in the config folder. pool definition config paths use the convention: `config/$environment/pool/$domain/$pool.yml`
 * modify `config/deploy-on-push.yml` to include only the pool definitions you wish to update. **take extra care here**. changes here can overwrite other peoples efforts and modify production worker pools. take care to only include pool definitions you are responsible for and remove or comment all other pool ids.
 * create taskcluster clients for each environment you will deploy to
   * [production](https://firefox-ci-tc.services.mozilla.com/auth/clients)

@@ -1,0 +1,36 @@
+---
+deleteOnExpiration: false
+description: |+
+    ## project/relops/image-builder/dev
+    ### production
+
+    this client is used by [cloud-image-builder](https://github.com/mozilla-platform-ops/cloud-image-builder) to build and test taskcluster windows worker cloud machine images.
+expires: 2022-12-12T23:59:59Z
+scopes:
+  - auth:create-role:repo:github.com/mozilla-platform-ops/cloud-image-builder:branch:*
+  - auth:create-role:worker-pool:gecko-t/win*
+  - auth:update-role:repo:github.com/mozilla-platform-ops/cloud-image-builder:branch:*
+  - auth:update-role:worker-pool:gecko-t/win*
+  - generic-worker:os-group:relops-test-workers/*
+  - generic-worker:os-group:relops/win2019/Administrators
+  - generic-worker:run-as-administrator:relops-test-workers/*
+  - generic-worker:run-as-administrator:relops/*
+  - queue:create-task:high:relops/*
+  - queue:create-task:highest:relops/*
+  - queue:create-task:low:relops/*
+  - queue:create-task:medium:relops/*
+  - queue:create-task:very-high:relops/*
+  - queue:create-task:{priority}:relops-test-workers/*
+  - queue:route:index.project.relops.cloud-image-builder.*
+  - queue:scheduler-id:-
+  - queue:scheduler-id:taskcluster-github
+  - secrets:get:project/relops/image-builder/dev
+  - worker-manager:manage-worker-pool:gecko-1/win*
+  - worker-manager:manage-worker-pool:gecko-3/win*
+  - worker-manager:manage-worker-pool:gecko-t/win*
+  - worker-manager:manage-worker-pool:mpd001-1/win*
+  - worker-manager:manage-worker-pool:mpd001-3/win*
+  - worker-manager:manage-worker-pool:relops-test-workers/*
+  - worker-manager:manage-worker-pool:relops/*
+  - worker-manager:provider:aws
+  - worker-manager:provider:azure

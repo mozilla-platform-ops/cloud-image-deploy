@@ -3,6 +3,8 @@ staging:
     client:
         - project/relops/image-builder/dev
         - project/relops/image-deploy/dev
+    role:
+        - repo:github.com/mozilla-platform-ops/cloud-image-builder:branch:master
     pool:
         gecko-t:
             - win10-64-gpu-azure

@@ -9,7 +9,7 @@ config:
     lifecycle:
         registrationTimeout: 3600
         reregistrationTimeout: 86400
-    maxCapacity: 1
+    maxCapacity: 6
     minCapacity: 0
     launchConfigs:
       -
@@ -76,9 +76,9 @@ config:
                     storageAccountType: StandardSSD_LRS
                 createOption: Empty
             imageReference:
-                id: "/subscriptions/dd0d4271-9b26-4c37-a025-1284a43a4385/resourceGroups/rg-central-us-gecko-t/providers/Microsoft.Compute/images/central-us-gecko-t-win7-32-dc5fd86-6cf4056"
+                id: "/subscriptions/dd0d4271-9b26-4c37-a025-1284a43a4385/resourceGroups/rg-central-us-gecko-t/providers/Microsoft.Compute/images/central-us-gecko-t-win7-32-323b1ef-b232a71"
         hardwareProfile:
-            vmSize: Standard_F2s_v2
+            vmSize: Standard_F8s_v2
         diagnosticsProfile:
             bootDiagnostics:
                 enabled: true
@@ -148,9 +148,9 @@ config:
                     storageAccountType: StandardSSD_LRS
                 createOption: Empty
             imageReference:
-                id: "/subscriptions/dd0d4271-9b26-4c37-a025-1284a43a4385/resourceGroups/rg-east-us-gecko-t/providers/Microsoft.Compute/images/east-us-gecko-t-win7-32-dc5fd86-6cf4056"
+                id: "/subscriptions/dd0d4271-9b26-4c37-a025-1284a43a4385/resourceGroups/rg-east-us-gecko-t/providers/Microsoft.Compute/images/east-us-gecko-t-win7-32-323b1ef-b232a71"
         hardwareProfile:
-            vmSize: Standard_F2s_v2
+            vmSize: Standard_F8s_v2
         diagnosticsProfile:
             bootDiagnostics:
                 enabled: true
@@ -220,9 +220,9 @@ config:
                     storageAccountType: StandardSSD_LRS
                 createOption: Empty
             imageReference:
-                id: "/subscriptions/dd0d4271-9b26-4c37-a025-1284a43a4385/resourceGroups/rg-east-us-2-gecko-t/providers/Microsoft.Compute/images/east-us-2-gecko-t-win7-32-dc5fd86-6cf4056"
+                id: "/subscriptions/dd0d4271-9b26-4c37-a025-1284a43a4385/resourceGroups/rg-east-us-2-gecko-t/providers/Microsoft.Compute/images/east-us-2-gecko-t-win7-32-323b1ef-b232a71"
         hardwareProfile:
-            vmSize: Standard_F2s_v2
+            vmSize: Standard_F8s_v2
         diagnosticsProfile:
             bootDiagnostics:
                 enabled: true
@@ -292,9 +292,9 @@ config:
                     storageAccountType: StandardSSD_LRS
                 createOption: Empty
             imageReference:
-                id: "/subscriptions/dd0d4271-9b26-4c37-a025-1284a43a4385/resourceGroups/rg-north-central-us-gecko-t/providers/Microsoft.Compute/images/north-central-us-gecko-t-win7-32-dc5fd86-6cf4056"
+                id: "/subscriptions/dd0d4271-9b26-4c37-a025-1284a43a4385/resourceGroups/rg-north-central-us-gecko-t/providers/Microsoft.Compute/images/north-central-us-gecko-t-win7-32-323b1ef-b232a71"
         hardwareProfile:
-            vmSize: Standard_F2s_v2
+            vmSize: Standard_F8s_v2
         diagnosticsProfile:
             bootDiagnostics:
                 enabled: true
@@ -364,9 +364,9 @@ config:
                     storageAccountType: StandardSSD_LRS
                 createOption: Empty
             imageReference:
-                id: "/subscriptions/dd0d4271-9b26-4c37-a025-1284a43a4385/resourceGroups/rg-south-central-us-gecko-t/providers/Microsoft.Compute/images/south-central-us-gecko-t-win7-32-dc5fd86-6cf4056"
+                id: "/subscriptions/dd0d4271-9b26-4c37-a025-1284a43a4385/resourceGroups/rg-south-central-us-gecko-t/providers/Microsoft.Compute/images/south-central-us-gecko-t-win7-32-323b1ef-b232a71"
         hardwareProfile:
-            vmSize: Standard_F2s_v2
+            vmSize: Standard_F8s_v2
         diagnosticsProfile:
             bootDiagnostics:
                 enabled: true

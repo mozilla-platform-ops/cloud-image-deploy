@@ -15,6 +15,5 @@ staging:
         - repo:github.com/mozilla-platform-ops/cloud-image-builder:branch:master
     pool:
         gecko-t:
-            - win10-64-gpu-azure
             - win7-32-azure
             - win7-32-gpu-azure

@@ -74,7 +74,7 @@ config:
         #evictionPolicy: Deallocate
         #billingProfile:
             #maxPrice: -1
-        #capacityPerInstance: 1
+        capacityPerInstance: 1
       -
         tags:
             workerType: gecko-t-win10-64-azure

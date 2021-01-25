@@ -1,0 +1,7 @@
+---
+description: |+
+    ## gecko-1/win2012-azure
+    ### staging
+scopes:
+    - auth:sentry:generic-worker
+    - auth:websocktunnel-token:cloudopsstage/*

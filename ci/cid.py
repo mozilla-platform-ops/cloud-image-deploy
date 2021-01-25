@@ -1,6 +1,7 @@
-import yaml
 import taskcluster.exceptions
+import yaml
 from datetime import datetime, timedelta
+from termcolor import colored
 
 
 def updateClient(authClient, configPath, clientId):
@@ -9,19 +10,27 @@ def updateClient(authClient, configPath, clientId):
         client = None
         try:
             client = authClient.client(clientId=clientId)
-            print('info: client {} existence detected'.format(clientId))
+            print(colored('trace: client {} existence detected'.format(clientId), 'cyan'))
         except taskcluster.exceptions.TaskclusterRestFailure as tcRestFailure:
             if tcRestFailure.status_code == 404:
                 client = None
-                print('info: client {} absence detected'.format(clientId))
+                print(colored('trace: client {} absence detected'.format(clientId), 'cyan'))
             else:
                 raise
         if client:
-            authClient.updateClient(clientId, payload)
-            print('info: client {} updated'.format(clientId))
+            try:
+                authClient.updateClient(clientId, payload)
+                print(colored('info: client {} updated'.format(clientId), 'yellow'))
+            except taskcluster.exceptions.TaskclusterRestFailure as exception:
+                print(colored('error: client {} update failed with status code {}'.format(clientId, exception.status_code), 'red'))
+                raise
         else:
-            authClient.createClient(clientId, payload)
-            print('info: client {} created'.format(clientId))
+            try:
+                authClient.createClient(clientId, payload)
+                print(colored('info: client {} created'.format(clientId), 'yellow'))
+            except taskcluster.exceptions.TaskclusterRestFailure as exception:
+                print(colored('error: client {} create failed with status code {}'.format(clientId, exception.status_code), 'red'))
+                raise
 
 def updateRole(authClient, configPath, roleId):
     with open(configPath, 'r') as stream:
@@ -29,36 +38,47 @@ def updateRole(authClient, configPath, roleId):
         role = None
         try:
             role = authClient.role(roleId=roleId)
-            print('info: role {} existence detected'.format(roleId))
+            print(colored('trace: role {} existence detected'.format(roleId), 'cyan'))
         except taskcluster.exceptions.TaskclusterRestFailure as tcRestFailure:
             if tcRestFailure.status_code == 404:
                 role = None
-                print('info: role {} absence detected'.format(roleId))
+                print(colored('trace: role {} absence detected'.format(roleId), 'cyan'))
             else:
                 raise
         if role:
-            authClient.updateRole(roleId, payload)
-            print('info: role {} updated'.format(roleId))
+            try:
+                authClient.updateRole(roleId, payload)
+                print(colored('info: role {} updated'.format(roleId), 'yellow'))
+            except taskcluster.exceptions.TaskclusterRestFailure as exception:
+                print(colored('error: role {} update failed with status code {}'.format(roleId, exception.status_code), 'red'))
+                raise
         else:
-            authClient.createRole(roleId, payload)
-            print('info: role {} created'.format(roleId))
+            try:
+                authClient.createRole(roleId, payload)
+                print(colored('info: role {} created'.format(roleId), 'yellow'))
+            except taskcluster.exceptions.TaskclusterRestFailure as exception:
+                print(colored('error: role {} create failed with status code {}'.format(roleId, exception.status_code), 'red'))
+                raise
 
 def updateWorkerPool(workerManagerClient, configPath, workerPoolId):
     with open(configPath, 'r') as stream:
         payload = yaml.safe_load(stream)
         try:
             workerManagerClient.workerPool(workerPoolId=workerPoolId)
-            print('info: worker pool {} existence detected'.format(
-                workerPoolId))
+            print(colored('trace: worker pool {} existence detected'.format(workerPoolId), 'cyan'))
             workerManagerClient.updateWorkerPool(workerPoolId, payload)
-            print('info: worker pool {} updated'.format(workerPoolId))
-        except taskcluster.exceptions.TaskclusterRestFailure as tcRestFailure:
-            if tcRestFailure.status_code == 404:
-                print('info: worker pool {} absence detected'.format(
-                    workerPoolId))
-                workerManagerClient.createWorkerPool(workerPoolId, payload)
-                print('info: worker pool {} created'.format(workerPoolId))
+            print(colored('info: worker pool {} updated'.format(workerPoolId), 'yellow'))
+        except taskcluster.exceptions.TaskclusterRestFailure as updateException:
+            if updateException.status_code == 404:
+                print(colored('trace: worker pool {} absence detected'.format(workerPoolId), 'cyan'))
+                try:
+                    workerManagerClient.createWorkerPool(workerPoolId, payload)
+                    print(colored('info: worker pool {} created'.format(workerPoolId), 'yellow'))
+                except taskcluster.exceptions.TaskclusterRestFailure as createException:
+                    print(colored('error: worker pool {} create failed with status code {}'.format(workerPoolId, createException.status_code), 'red'))
+                    raise
             else:
+                print(colored('error: worker pool {} update failed with status code {}'.format(workerPoolId, updateException.status_code), 'red'))
                 raise
 
 def createTask(
@@ -126,5 +146,5 @@ def createTask(
             'retry': retriggerOnExitCodes
         }
     queueClient.createTask(taskId, payload)
-    print('info: task {} ({}: {}), created with priority: {}'.format(
-        taskId, taskName, taskDescription, priority))
+    print(colored('info: task {} ({}: {}), created with priority: {}'.format(
+        taskId, taskName, taskDescription, priority), 'yellow'))

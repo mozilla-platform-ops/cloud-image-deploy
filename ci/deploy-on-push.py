@@ -1,7 +1,9 @@
 import yaml
 import os
+import sys
 import taskcluster
 from cid import updateClient, updateRole, updateWorkerPool
+from termcolor import colored
 
 
 basePath = os.path.abspath(os.path.dirname(__file__))
@@ -22,12 +24,24 @@ with open(secretsPath, 'r') as secretsStream:
             for clientId in deployConfig[environment]['client']:
                 clientConfigPath = os.path.abspath('{}/../config/{}/client/{}.yml'.format(basePath, environment, clientId))
                 print('- updating client: {}/{} with {}'.format(environment, clientId, clientConfigPath))
-                updateClient(authClient, clientConfigPath, clientId)
+                try:
+                    updateClient(authClient, clientConfigPath, clientId)
+                except taskcluster.exceptions.TaskclusterRestFailure:
+                    print(colored('  - client update failed: taskcluster rest failure', 'red'))
+                    # todo: check for scope exceptions and notify / correct missing scopes
+                except:
+                    print(colored('  - client update failed: {}'.format(sys.exc_info()[0]), 'red'))
             # roles
             for roleId in deployConfig[environment]['role']:
                 roleConfigPath = os.path.abspath('{}/../config/{}/role/{}.yml'.format(basePath, environment, roleId))
                 print('- updating role: {}/{} with {}'.format(environment, roleId, roleConfigPath))
-                updateRole(authClient, roleConfigPath, roleId)
+                try:
+                    updateRole(authClient, roleConfigPath, roleId)
+                except taskcluster.exceptions.TaskclusterRestFailure:
+                    print(colored('  - role update failed: taskcluster rest failure', 'red'))
+                    # todo: check for scope exceptions and notify / correct missing scopes
+                except:
+                    print(colored('  - role update failed: {}'.format(sys.exc_info()[0]), 'red'))
 
             # pools
             for domain in deployConfig[environment]['pool']:
@@ -35,5 +49,11 @@ with open(secretsPath, 'r') as secretsStream:
                     poolId = '{}/{}'.format(domain, pool)
                     poolConfigPath = os.path.abspath('{}/../config/{}/pool/{}/{}.yml'.format(basePath, environment, domain, pool))
                     print('- updating pool: {}/{} with {}'.format(environment, poolId, poolConfigPath))
-                    updateWorkerPool(workerManagerClient, poolConfigPath, poolId)
+                    try:
+                        updateWorkerPool(workerManagerClient, poolConfigPath, poolId)
+                    except taskcluster.exceptions.TaskclusterRestFailure:
+                        print(colored('  - pool update failed: taskcluster rest failure', 'red'))
+                        # todo: check for scope exceptions and notify / correct missing scopes
+                    except:
+                        print(colored('  - pool update failed: {}'.format(sys.exc_info()[0]), 'red'))
 

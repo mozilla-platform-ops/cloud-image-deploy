@@ -3,7 +3,13 @@ production:
     client:
         - project/relops/image-builder/dev
         - project/relops/image-deploy/dev
-    role: []
+    role:
+        - repo:github.com/mozilla-platform-ops/cloud-image-builder:branch:main
+        - worker-pool:gecko-1/win2012-azure
+        - worker-pool:gecko-t/win7-32-azure
+        - worker-pool:gecko-t/win7-32-gpu-azure
+        - worker-pool:gecko-t/win10-64-azure
+        - worker-pool:gecko-t/win10-64-gpu-azure
     pool:
         gecko-t:
             - win7-32-azure
@@ -12,7 +18,12 @@ staging:
         - project/relops/image-builder/dev
         - project/relops/image-deploy/dev
     role:
-        - repo:github.com/mozilla-platform-ops/cloud-image-builder:branch:master
+        - repo:github.com/mozilla-platform-ops/cloud-image-builder:branch:main
+        - worker-pool:gecko-1/win2012-azure
+        - worker-pool:gecko-t/win7-32-azure
+        - worker-pool:gecko-t/win7-32-gpu-azure
+        - worker-pool:gecko-t/win10-64-azure
+        - worker-pool:gecko-t/win10-64-gpu-azure
     pool:
         gecko-t:
             - win7-32-azure

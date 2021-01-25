@@ -1,0 +1,42 @@
+version: 1
+policy:
+  pullRequests: collaborators
+tasks:
+  $let:
+    head_rev:
+      $if: tasks_for == "github-pull-request"
+      then: ${event.pull_request.head.sha}
+      else: ${event.after}
+    repository:
+      $if: tasks_for == "github-pull-request"
+      then: ${event.pull_request.head.repo.html_url}
+      else: ${event.repository.html_url}
+  in:
+    $match:
+      (tasks_for == "github-push"):
+        taskId:
+          $eval: as_slugid("decision")
+        deadline:
+          $fromNow: 1 day
+        provisionerId: relops-3
+        workerType: decision
+        metadata:
+          name: '00 :: create image deployment tasks'
+          description: |+
+              determine which resources should be deployed and
+              trigger appropriate deployment tasks for the same
+          owner: ${event.head.user.email}
+          source: ${event.repository.url}
+        payload:
+          maxRunTime: 600
+          image: python:latest
+          command:
+            - /bin/bash
+            - '--login'
+            - '-c'
+            - >-
+              git clone ${repository}
+              && cd cloud-image-deploy
+              && git config advice.detachedHead false
+              && git checkout ${head_rev}
+              && python --version

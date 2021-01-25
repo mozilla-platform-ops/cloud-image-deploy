@@ -41,7 +41,7 @@ for tc_environment in "${!tc_environments[@]}"; do
   eval `${HOME}/bin/${asset_name} signin --name cloud-image-deploy --scope auth:create-client:${tc_client_id} --scope auth:update-client:${tc_client_id} --scope auth:reset-access-token:${tc_client_id} --scope ${session_client_scopes}`
   if ${HOME}/bin/${asset_name} api auth client ${tc_client_id} &> /dev/null; then
     echo "client ${tc_client_id} exists"
-    yq --arg expires $(date -d '+1 hour' -u '+%Y-%m-%dT%H:%M:%SZ') '. | .expires=$expires' ${script_dir}/../config/${tc_environment}/client/${tc_client_id}.yml | ${HOME}/bin/${asset_name} api auth updateClient ${tc_client_id} > ${tmp_dir}/update-${tc_environment}-client-${tc_client_id}-response.json
+    yq --arg expires $(date -d '+1 day' -u '+%Y-%m-%dT%H:%M:%SZ') '. | .expires=$expires' ${script_dir}/../config/${tc_environment}/client/${tc_client_id}.yml | ${HOME}/bin/${asset_name} api auth updateClient ${tc_client_id} > ${tmp_dir}/update-${tc_environment}-client-${tc_client_id}-response.json
     ${HOME}/bin/${asset_name} api auth resetAccessToken ${tc_client_id} > ${tmp_dir}/reset-${tc_environment}-client-${tc_client_id}-response.json
     tc_client_access_token=$(jq -r '.accessToken' ${tmp_dir}/reset-${tc_environment}-client-${tc_client_id}-response.json)
     echo "client ${tc_client_id} updated with reset access token ${tc_client_access_token}"
@@ -50,7 +50,7 @@ for tc_environment in "${!tc_environments[@]}"; do
     yq --arg tc_client_id ${tc_client_id} --arg tc_access_token ${tc_client_access_token} --argjson tc_client_id_path "[\"${tc_environment}\",\"credentials\",\"clientId\"]" --argjson tc_access_token_path "[\"${tc_environment}\",\"credentials\",\"accessToken\"]" -y '. | getpath($tc_client_id_path)=$tc_client_id | getpath($tc_access_token_path)=$tc_access_token' ${options_backup_path} > ${script_dir}/../config/${USER}-options.yml
   else
     echo "client ${tc_client_id} does not exist"
-    yq --arg expires $(date -d '+1 hour' -u '+%Y-%m-%dT%H:%M:%SZ') '. | .expires=$expires' ${script_dir}/../config/${tc_environment}/client/${tc_client_id}.yml | ${HOME}/bin/${asset_name} api auth createClient ${tc_client_id} > ${tmp_dir}/create-${tc_environment}-client-${tc_client_id}-response.json
+    yq --arg expires $(date -d '+1 day' -u '+%Y-%m-%dT%H:%M:%SZ') '. | .expires=$expires' ${script_dir}/../config/${tc_environment}/client/${tc_client_id}.yml | ${HOME}/bin/${asset_name} api auth createClient ${tc_client_id} > ${tmp_dir}/create-${tc_environment}-client-${tc_client_id}-response.json
     tc_client_access_token=$(jq -r '.accessToken' ${tmp_dir}/create-${tc_environment}-client-${tc_client_id}-response.json)
     echo "client ${tc_client_id} created with access token ${tc_client_access_token}"
     options_backup_path=${script_dir}/../config/${USER}-options-$(date '+%Y%m%d-%H%M%S').yml

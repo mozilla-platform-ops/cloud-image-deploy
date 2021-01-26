@@ -64,4 +64,5 @@ tasks:
               && git checkout ${head_rev}
               && git reset --hard ${event.after}
               && python -m pip install --upgrade pip | grep -v "^[[:space:]]*$"
+              && pip install -r ci/requirements.txt | grep -v "^[[:space:]]*$"
               && python ci/cloud-image-deploy.py

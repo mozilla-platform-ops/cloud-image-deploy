@@ -1,3 +1,4 @@
+---
 version: 1
 policy:
   pullRequests: collaborators
@@ -20,23 +21,47 @@ tasks:
           $fromNow: 1 day
         provisionerId: relops-3
         workerType: decision
+        routes:
+          - index.project.relops.${event.repository.name}.decision.revision.${event.after}
+          - index.project.relops.${event.repository.name}.decision.latest
+        scopes:
+          - assume:repo:github.com/${event.organization.login}/${event.repository.name}:branch:${event.repository.default_branch}
+          - queue:scheduler-id:taskcluster-github
+        extra:
+          github:
+            env: true
+          data:
+            base:
+              sha: ${event.before}
+              user:
+                login: ${event.sender.login}
+            head:
+              sha: ${event.after}
+              user:
+                email: ${event.pusher.email}
         metadata:
           name: '00 :: create image deployment tasks'
           description: |+
               determine which resources should be deployed and
               trigger appropriate deployment tasks for the same
-          owner: ${event.head.user.email}
-          source: ${event.repository.url}
+          owner: ${event.pusher.email}
+          source: ${event.repository.html_url}
         payload:
           maxRunTime: 600
           image: python:latest
+          features:
+            taskclusterProxy: true
+          env:
+            GITHUB_HEAD_SHA: ${event.after}
           command:
             - /bin/bash
             - '--login'
             - '-c'
             - >-
-              git clone ${repository}
-              && cd cloud-image-deploy
-              && git config advice.detachedHead false
+              git clone --quiet ${event.repository.clone_url}
+              && cd ${event.repository.name}
+              && git fetch
               && git checkout ${head_rev}
+              && git reset --hard ${event.after}
+              && python -m pip install --upgrade pip | grep -v "^[[:space:]]*$"
               && python --version

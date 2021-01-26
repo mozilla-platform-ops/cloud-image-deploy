@@ -1,2 +1,3 @@
 pyyaml==5.4.1
 taskcluster==40.0.3
+termcolor==1.1.0

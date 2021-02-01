@@ -11,6 +11,9 @@ example use cases include:
 
 it is important to note that changes made by this application to taskcluster worker pool configurations are not permanent and will be overwritten any time ci-admin is run and the configurations here do not match the configurations in ci-configuration.
 
+* production deployments are currently possible, but disabled.
+* some configuration files are renamed with a `.yaml` (instead of `.yml`) extension. these are useful to have in the repo for templating purposes, but are **not deployed** on push.
+
 ### installation
 
 * clone this repository
@@ -25,7 +28,15 @@ it is important to note that changes made by this application to taskcluster wor
 
 ### configuration
 
-* create or modify a worker pool definition in the config folder. pool definition config paths use the convention: `config/$environment/pool/$domain/$pool.yml`
+* create or modify a worker pool definition in the config folder.
+  * client definition config paths use the convention: `config/$environment/client/$clientId.yml` (where $clientId may contain path separators)
+  * pool definition config paths use the convention: `config/$environment/pool/$domain/$pool.yml`
+  * role definition config paths use the convention: `config/$environment/role/$roleId.yml` (where $roleId may contain path separators)
+  ```
+
+### configuration (for running locally)
+these steps only apply to running cloud-image-deploy locally. if you push modified (client/pool/role) configurations (using path conventions), they will deploy.
+
 * modify `config/deploy-on-push.yml` to include only the pool definitions you wish to update. **take extra care here**. changes here can overwrite other peoples efforts and modify production worker pools. take care to only include pool definitions you are responsible for and remove or comment all other pool ids.
 * create taskcluster clients for each environment you will deploy to
   * [production](https://firefox-ci-tc.services.mozilla.com/auth/clients)
@@ -45,7 +56,10 @@ it is important to note that changes made by this application to taskcluster wor
       ```
 * create `config/taskcluster-client-options.yml` using `config/taskcluster-client-options-example.yml` as a template
 
-### usage
-```
+### usage (for running locally)
+```bash
+# obtain credentials using taskcluster-cli
+set_session_credentials.sh
+# deploy configured clients, pools, roles
 python3 ci/deploy-on-push.py
 ```

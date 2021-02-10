@@ -1,7 +1,7 @@
 ---
 description:  |+
     ## repo:github.com/mozilla-platform-ops/cloud-image-builder:branch:main
-    ### staging
+    ### production
 
     this role is used by [cloud-image-builder](https://github.com/mozilla-platform-ops/cloud-image-builder) to build and test taskcluster windows worker cloud machine images.
 scopes:

@@ -1,0 +1,19 @@
+---
+production:
+    client:
+        - project/relops/image-builder/dev
+    role:
+        - repo:github.com/mozilla-platform-ops/cloud-image-deploy:branch:main
+    pool:
+        gecko-t:
+            - win7-32-azure
+            - win7-32-gpu-azure
+staging:
+    client:
+        - project/relops/image-builder/dev
+    role:
+        - repo:github.com/mozilla-platform-ops/cloud-image-deploy:branch:main
+    pool:
+        gecko-t:
+            - win7-32-azure
+            - win7-32-gpu-azure

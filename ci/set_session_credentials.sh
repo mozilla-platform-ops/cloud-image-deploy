@@ -46,16 +46,33 @@ for tc_environment in "${!tc_environments[@]}"; do
     tc_client_access_token=$(jq -r '.accessToken' ${tmp_dir}/reset-${tc_environment}-client-${tc_client_id}-response.json)
     echo "client ${tc_client_id} updated with reset access token ${tc_client_access_token}"
     options_backup_path=${script_dir}/../config/${USER}-options-$(date '+%Y%m%d-%H%M%S').yml
-    mv ${script_dir}/../config/${USER}-options.yml ${options_backup_path}
-    yq --arg tc_client_id ${tc_client_id} --arg tc_access_token ${tc_client_access_token} --argjson tc_client_id_path "[\"${tc_environment}\",\"credentials\",\"clientId\"]" --argjson tc_access_token_path "[\"${tc_environment}\",\"credentials\",\"accessToken\"]" -y '. | getpath($tc_client_id_path)=$tc_client_id | getpath($tc_access_token_path)=$tc_access_token' ${options_backup_path} > ${script_dir}/../config/${USER}-options.yml
+    if mv ${script_dir}/../config/${USER}-options.yml ${options_backup_path} && [ -f ${options_backup_path} ] && [ ! -f ${script_dir}/../config/${USER}-options.yml ]; then
+      echo "moved ${script_dir}/../config/${USER}-options.yml to ${options_backup_path}"
+      if yq --arg tc_client_id ${tc_client_id} --arg tc_access_token ${tc_client_access_token} --argjson tc_client_id_path "[\"${tc_environment}\",\"credentials\",\"clientId\"]" --argjson tc_access_token_path "[\"${tc_environment}\",\"credentials\",\"accessToken\"]" -y '. | getpath($tc_client_id_path)=$tc_client_id | getpath($tc_access_token_path)=$tc_access_token' ${options_backup_path} > ${script_dir}/../config/${USER}-options.yml; then
+        echo "client ${tc_client_id} with access token ${tc_client_access_token} added to ${script_dir}/../config/${USER}-options.yml"
+      else
+        echo "failed to add client ${tc_client_id} with access token ${tc_client_access_token} to ${script_dir}/../config/${USER}-options.yml"
+      fi
+    else
+      echo "failed to move ${script_dir}/../config/${USER}-options.yml to ${options_backup_path}"
+    fi
+    
   else
     echo "client ${tc_client_id} does not exist"
     yq --arg expires $(date -d '+1 day' -u '+%Y-%m-%dT%H:%M:%SZ') '. | .expires=$expires' ${script_dir}/../config/${tc_environment}/client/${tc_client_id}.yml | ${HOME}/bin/${asset_name} api auth createClient ${tc_client_id} > ${tmp_dir}/create-${tc_environment}-client-${tc_client_id}-response.json
     tc_client_access_token=$(jq -r '.accessToken' ${tmp_dir}/create-${tc_environment}-client-${tc_client_id}-response.json)
     echo "client ${tc_client_id} created with access token ${tc_client_access_token}"
     options_backup_path=${script_dir}/../config/${USER}-options-$(date '+%Y%m%d-%H%M%S').yml
-    mv ${script_dir}/../config/${USER}-options.yml ${options_backup_path}
-    yq --arg tc_client_id ${tc_client_id} --arg tc_access_token ${tc_client_access_token} --argjson tc_client_id_path "[\"${tc_environment}\",\"credentials\",\"clientId\"]" --argjson tc_access_token_path "[\"${tc_environment}\",\"credentials\",\"accessToken\"]" -y '. | getpath($tc_client_id_path)=$tc_client_id | getpath($tc_access_token_path)=$tc_access_token' ${options_backup_path} > ${script_dir}/../config/${USER}-options.yml
+    if mv ${script_dir}/../config/${USER}-options.yml ${options_backup_path} && [ -f ${options_backup_path} ] && [ ! -f ${script_dir}/../config/${USER}-options.yml ]; then
+      echo "moved ${script_dir}/../config/${USER}-options.yml to ${options_backup_path}"
+      if yq --arg tc_client_id ${tc_client_id} --arg tc_access_token ${tc_client_access_token} --argjson tc_client_id_path "[\"${tc_environment}\",\"credentials\",\"clientId\"]" --argjson tc_access_token_path "[\"${tc_environment}\",\"credentials\",\"accessToken\"]" -y '. | getpath($tc_client_id_path)=$tc_client_id | getpath($tc_access_token_path)=$tc_access_token' ${options_backup_path} > ${script_dir}/../config/${USER}-options.yml; then
+        echo "client ${tc_client_id} with access token ${tc_client_access_token} added to ${script_dir}/../config/${USER}-options.yml"
+      else
+        echo "failed to add client ${tc_client_id} with access token ${tc_client_access_token} to ${script_dir}/../config/${USER}-options.yml"
+      fi
+    else
+      echo "failed to move ${script_dir}/../config/${USER}-options.yml to ${options_backup_path}"
+    fi
   fi
 done
 rm -rf ${tmp_dir}

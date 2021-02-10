@@ -1,0 +1,266 @@
+---
+# todo: update occ .taskcluster.yml to use relops-3/linux
+# rather than releng-3/linux and fix livelogging
+description: |+
+    ## relops-3/linux
+    ### production
+owner: grenade@mozilla.com
+emailOnError: true
+providerId: aws
+config:
+    lifecycle:
+        registrationTimeout: 1800
+        reregistrationTimeout: 345600
+    maxCapacity: 100
+    minCapacity: 0
+    launchConfigs:
+        - 
+            region: us-east-1
+            launchConfig:
+                ImageId: ami-0cf2dc9e4b190d0c9
+                SubnetId: subnet-566e060c
+                Placement:
+                    AvailabilityZone: us-east-1a
+                InstanceType: m5d.xlarge
+                SecurityGroupIds:
+                    - sg-7aca300a
+                InstanceMarketOptions:
+                    MarketType: spot
+            workerConfig:
+                capacity: 1
+                shutdown:
+                    enabled: true
+                    afterIdleSeconds: 900
+                dindImage: taskcluster/dind-service:v4.0
+                deviceManagement:
+                    kvm:
+                        enabled: false
+                    hostSharedMemory:
+                        enabled: false
+            additionalUserData: {}
+            capacityPerInstance: 1
+        - 
+            region: us-east-1
+            launchConfig:
+                ImageId: ami-0cf2dc9e4b190d0c9
+                SubnetId: subnet-f2c93496
+                Placement:
+                    AvailabilityZone: us-east-1b
+                InstanceType: m5d.xlarge
+                SecurityGroupIds:
+                    - sg-7aca300a
+                InstanceMarketOptions:
+                    MarketType: spot
+            workerConfig:
+                capacity: 1
+                shutdown:
+                    enabled: true
+                    afterIdleSeconds: 900
+                dindImage: taskcluster/dind-service:v4.0
+                deviceManagement:
+                    kvm:
+                        enabled: false
+                    hostSharedMemory:
+                        enabled: false
+            additionalUserData: {}
+            capacityPerInstance: 1
+        - 
+            region: us-east-1
+            launchConfig:
+                ImageId: ami-0cf2dc9e4b190d0c9
+                SubnetId: subnet-c52454e9
+                Placement:
+                    AvailabilityZone: us-east-1c
+                InstanceType: m5d.xlarge
+                SecurityGroupIds:
+                    - sg-7aca300a
+                InstanceMarketOptions:
+                    MarketType: spot
+            workerConfig:
+                capacity: 1
+                shutdown:
+                    enabled: true
+                    afterIdleSeconds: 900
+                dindImage: taskcluster/dind-service:v4.0
+                deviceManagement:
+                    kvm:
+                        enabled: false
+                    hostSharedMemory:
+                        enabled: false
+            additionalUserData: {}
+            capacityPerInstance: 1
+        - 
+            region: us-east-1
+            launchConfig:
+                ImageId: ami-0cf2dc9e4b190d0c9
+                SubnetId: subnet-e7e6ccaf
+                Placement:
+                    AvailabilityZone: us-east-1d
+                InstanceType: m5d.xlarge
+                SecurityGroupIds:
+                    - sg-7aca300a
+                InstanceMarketOptions:
+                    MarketType: spot
+            workerConfig:
+                capacity: 1
+                shutdown:
+                    enabled: true
+                    afterIdleSeconds: 900
+                dindImage: taskcluster/dind-service:v4.0
+                deviceManagement:
+                    kvm:
+                        enabled: false
+                    hostSharedMemory:
+                        enabled: false
+            additionalUserData: {}
+            capacityPerInstance: 1
+        - 
+            region: us-east-1
+            launchConfig:
+                ImageId: ami-0cf2dc9e4b190d0c9
+                SubnetId: subnet-7f720d73
+                Placement:
+                    AvailabilityZone: us-east-1f
+                InstanceType: m5d.xlarge
+                SecurityGroupIds:
+                    - sg-7aca300a
+                InstanceMarketOptions:
+                    MarketType: spot
+            workerConfig:
+                capacity: 1
+                shutdown:
+                    enabled: true
+                    afterIdleSeconds: 900
+                dindImage: taskcluster/dind-service:v4.0
+                deviceManagement:
+                    kvm:
+                        enabled: false
+                    hostSharedMemory:
+                        enabled: false
+            additionalUserData: {}
+            capacityPerInstance: 1
+        - 
+            region: us-west-1
+            launchConfig:
+                ImageId: ami-0c3b7d65639bf5ba2
+                SubnetId: subnet-7641632e
+                Placement:
+                    AvailabilityZone: us-west-1b
+                InstanceType: m5d.xlarge
+                SecurityGroupIds:
+                    - sg-5ce02b3a
+                InstanceMarketOptions:
+                    MarketType: spot
+            workerConfig:
+                capacity: 1
+                shutdown:
+                    enabled: true
+                    afterIdleSeconds: 900
+                dindImage: taskcluster/dind-service:v4.0
+                deviceManagement:
+                    kvm:
+                        enabled: false
+                    hostSharedMemory:
+                        enabled: false
+            additionalUserData: {}
+            capacityPerInstance: 1
+        - 
+            region: us-west-1
+            launchConfig:
+                ImageId: ami-0c3b7d65639bf5ba2
+                SubnetId: subnet-48a9b82c
+                Placement:
+                    AvailabilityZone: us-west-1c
+                InstanceType: m5d.xlarge
+                SecurityGroupIds:
+                    - sg-5ce02b3a
+                InstanceMarketOptions:
+                    MarketType: spot
+            workerConfig:
+                capacity: 1
+                shutdown:
+                    enabled: true
+                    afterIdleSeconds: 900
+                dindImage: taskcluster/dind-service:v4.0
+                deviceManagement:
+                    kvm:
+                        enabled: false
+                    hostSharedMemory:
+                        enabled: false
+            additionalUserData: {}
+            capacityPerInstance: 1
+        - 
+            region: us-west-2
+            launchConfig:
+                ImageId: ami-03e0359d864cbcf5f
+                SubnetId: subnet-d948b6bf
+                Placement:
+                    AvailabilityZone: us-west-2a
+                InstanceType: m5d.xlarge
+                SecurityGroupIds:
+                    - sg-a0d6beda
+                InstanceMarketOptions:
+                    MarketType: spot
+            workerConfig:
+                capacity: 1
+                shutdown:
+                    enabled: true
+                    afterIdleSeconds: 900
+                dindImage: taskcluster/dind-service:v4.0
+                deviceManagement:
+                    kvm:
+                        enabled: false
+                    hostSharedMemory:
+                        enabled: false
+            additionalUserData: {}
+            capacityPerInstance: 1
+        - 
+            region: us-west-2
+            launchConfig:
+                ImageId: ami-03e0359d864cbcf5f
+                SubnetId: subnet-2eaaba67
+                Placement:
+                    AvailabilityZone: us-west-2b
+                InstanceType: m5d.xlarge
+                SecurityGroupIds:
+                    - sg-a0d6beda
+                InstanceMarketOptions:
+                    MarketType: spot
+            workerConfig:
+                capacity: 1
+                shutdown:
+                    enabled: true
+                    afterIdleSeconds: 900
+                dindImage: taskcluster/dind-service:v4.0
+                deviceManagement:
+                    kvm:
+                        enabled: false
+                    hostSharedMemory:
+                        enabled: false
+            additionalUserData: {}
+            capacityPerInstance: 1
+        - 
+            region: us-west-2
+            launchConfig:
+                ImageId: ami-03e0359d864cbcf5f
+                SubnetId: subnet-540a9f0f
+                Placement:
+                    AvailabilityZone: us-west-2c
+                InstanceType: m5d.xlarge
+                SecurityGroupIds:
+                    - sg-a0d6beda
+                InstanceMarketOptions:
+                    MarketType: spot
+            workerConfig:
+                capacity: 1
+                shutdown:
+                    enabled: true
+                    afterIdleSeconds: 900
+                dindImage: taskcluster/dind-service:v4.0
+                deviceManagement:
+                    kvm:
+                        enabled: false
+                    hostSharedMemory:
+                        enabled: false
+            additionalUserData: {}
+            capacityPerInstance: 1

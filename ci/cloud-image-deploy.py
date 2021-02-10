@@ -7,9 +7,9 @@ from cid import updateClient, updateRole, updateWorkerPool
 from termcolor import colored
 
 environment = 'staging' if 'stage' in os.environ.get('TASKCLUSTER_ROOT_URL', '') else 'production'
-if environment != 'staging':
-    print('info: skipping non staging deployments')
-    quit()
+#if environment != 'staging':
+#    print('info: skipping non staging deployments')
+#    quit()
 
 basePath = os.path.abspath(os.path.dirname(__file__))
 cfgPath = os.path.abspath(os.path.join(basePath, '../config', environment))

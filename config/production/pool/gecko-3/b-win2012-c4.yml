@@ -1,6 +1,7 @@
 ---
+# todo: deploy to prod and claim a task
 description: |+
-    ## gecko-3/b-win2012-c5
+    ## gecko-3/b-win2012-c4
     ### production
 owner: grenade@mozilla.com
 emailOnError: true
@@ -14,7 +15,7 @@ config:
     launchConfigs:
         - region: us-east-1
           launchConfig:
-              ImageId: ami-0978123a845a061c1
+              ImageId: ami-073d5f4d60cc00a27
               SubnetId: subnet-566e060c
               Placement:
                   AvailabilityZone: us-east-1a
@@ -68,7 +69,7 @@ config:
           capacityPerInstance: 1
         - region: us-east-1
           launchConfig:
-              ImageId: ami-0978123a845a061c1
+              ImageId: ami-073d5f4d60cc00a27
               SubnetId: subnet-f2c93496
               Placement:
                   AvailabilityZone: us-east-1b
@@ -123,7 +124,7 @@ config:
           capacityPerInstance: 1
         - region: us-east-1
           launchConfig:
-              ImageId: ami-0978123a845a061c1
+              ImageId: ami-073d5f4d60cc00a27
               SubnetId: subnet-e7e6ccaf
               Placement:
                   AvailabilityZone: us-east-1d
@@ -177,7 +178,7 @@ config:
           capacityPerInstance: 1
         - region: us-east-1
           launchConfig:
-              ImageId: ami-0978123a845a061c1
+              ImageId: ami-073d5f4d60cc00a27
               SubnetId: subnet-deb5a8e2
               Placement:
                   AvailabilityZone: us-east-1e
@@ -231,7 +232,7 @@ config:
           capacityPerInstance: 1
         - region: us-east-1
           launchConfig:
-              ImageId: ami-0978123a845a061c1
+              ImageId: ami-073d5f4d60cc00a27
               SubnetId: subnet-7f720d73
               Placement:
                   AvailabilityZone: us-east-1f
@@ -285,7 +286,7 @@ config:
           capacityPerInstance: 1
         - region: us-west-1
           launchConfig:
-              ImageId: ami-07163c5e52e34866a
+              ImageId: ami-0784b52a3ea5926cf
               SubnetId: subnet-48a9b82c
               Placement:
                   AvailabilityZone: us-west-1c
@@ -339,7 +340,7 @@ config:
           capacityPerInstance: 1
         - region: us-west-2
           launchConfig:
-              ImageId: ami-03da2722a08986fe2
+              ImageId: ami-0d83494851d800436
               SubnetId: subnet-d948b6bf
               Placement:
                   AvailabilityZone: us-west-2a
@@ -393,7 +394,7 @@ config:
           capacityPerInstance: 1
         - region: us-west-2
           launchConfig:
-              ImageId: ami-03da2722a08986fe2
+              ImageId: ami-0d83494851d800436
               SubnetId: subnet-2eaaba67
               Placement:
                   AvailabilityZone: us-west-2b
@@ -447,7 +448,7 @@ config:
           capacityPerInstance: 1
         - region: us-west-2
           launchConfig:
-              ImageId: ami-03da2722a08986fe2
+              ImageId: ami-0d83494851d800436
               SubnetId: subnet-540a9f0f
               Placement:
                   AvailabilityZone: us-west-2c

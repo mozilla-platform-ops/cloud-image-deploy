@@ -1,0 +1,7 @@
+---
+description: |+
+    ## gecko-3/b-win2012-c4
+    ### staging
+scopes:
+    - auth:sentry:generic-worker
+    - auth:websocktunnel-token:cloudopsstage/*

@@ -53,7 +53,7 @@ for poolConfigPath in glob.glob(os.path.join(cfgPath, 'pool', '**', '*.yml'), re
         updateWorkerPool(workerManagerClient, poolConfigPath, poolId)
     except taskcluster.exceptions.TaskclusterRestFailure:
         print(colored('  - pool update failed: taskcluster rest failure', 'red'))
-        # todo: check for scope exceptions and notify missing scopes
+        raise
     except:
         print(colored('  - pool update failed: {}'.format(sys.exc_info()[0]), 'red'))
 

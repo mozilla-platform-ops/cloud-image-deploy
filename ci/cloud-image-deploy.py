@@ -53,11 +53,12 @@ createTask(
         '--login',
         '-c',
         ' && '.join([
-            'git clone https://github.com/mozilla-platform-ops/cloud-image-deploy',
+            'git clone --quiet https://github.com/mozilla-platform-ops/cloud-image-deploy',
             'cd cloud-image-deploy',
             'git fetch',
             'git checkout {}'.format(commitSha),
             'git reset --hard {}'.format(commitSha),
+            'export PATH="{}/.cargo/bin:{}"'.format(os.getenv('HOME'), os.getenv('PATH'))
             'cargo build --verbose',
             'cargo test --verbose',
             'cargo run --verbose'

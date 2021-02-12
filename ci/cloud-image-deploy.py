@@ -1,8 +1,9 @@
 import glob
-import yaml
 import os
+import slugid
 import sys
 import taskcluster
+import yaml
 from cid import createTask, updateClient, updateRole, updateWorkerPool
 from termcolor import colored
 

@@ -58,7 +58,7 @@ createTask(
             'git fetch',
             'git checkout {}'.format(commitSha),
             'git reset --hard {}'.format(commitSha),
-            'export PATH="{}/.cargo/bin:{}"'.format(os.getenv('HOME'), os.getenv('PATH'))
+            'export PATH="{}/.cargo/bin:{}"'.format(os.getenv('HOME'), os.getenv('PATH')),
             'cargo build --verbose',
             'cargo test --verbose',
             'cargo run --verbose'

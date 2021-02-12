@@ -29,7 +29,7 @@ taskGroupId = os.getenv('TASK_ID')
 
 createTask(
     queueClient = queueClient,
-    image = 'rust:latest',
+    image = 'rust:1.49.0',
     taskId = slugid.nice(),
     taskName = '01 :: generate ci configuration patches (wip)',
     taskDescription = 'the intention here is to generate patches for ci-config containing updated worker pool configurations',

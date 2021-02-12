@@ -20,32 +20,6 @@ async fn main() {
         // fallback to anonymous client
         _ => ClientBuilder::new(&root_url)
     };
-    /*
-    match Auth::new(api_client) {
-        Ok(auth_client) => {
-            let prefix: Option<String> = None; // filter on client prefix: Some("my_client_prefix")
-            let mut continuation_token: Option<String> = None;
-            let limit: Option<String> = None; // results per page: Some("10")
-            loop {
-                match auth_client.listClients(prefix.as_deref(), continuation_token.as_deref(), limit.as_deref()).await {
-                    Ok(container) => {
-                        for client in container.get("clients").unwrap().as_array().unwrap() {
-                            println!("{:?}", client);
-                        }
-                        match container.get("continuationToken") {
-                            Some(v) => {
-                                continuation_token = Some(v.as_str().unwrap().to_owned());
-                            },
-                            _ => break
-                        };
-                    },
-                    Err(list_clients_error) => panic!("list_clients_error: {:?}", list_clients_error)
-                };
-            }
-        },
-        Err(new_auth_client_error) => panic!("new_auth_client_error: {:?}", new_auth_client_error)
-    };
-    */
     match WorkerManager::new(api_client) {
         Ok(wm_client) => {
             let mut continuation_token: Option<String> = None;

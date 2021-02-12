@@ -3,19 +3,19 @@ version: 1
 policy:
   pullRequests: collaborators
 tasks:
-  -
-    $let:
-      head_rev:
-        $if: tasks_for == "github-pull-request"
-        then: ${event.pull_request.head.sha}
-        else: ${event.after}
-      repository:
-        $if: tasks_for == "github-pull-request"
-        then: ${event.pull_request.head.repo.html_url}
-        else: ${event.repository.html_url}
-    in:
-      $match:
-        (tasks_for == "github-push"):
+  $let:
+    head_rev:
+      $if: tasks_for == "github-pull-request"
+      then: ${event.pull_request.head.sha}
+      else: ${event.after}
+    repository:
+      $if: tasks_for == "github-pull-request"
+      then: ${event.pull_request.head.repo.html_url}
+      else: ${event.repository.html_url}
+  in:
+    $match:
+      (tasks_for == "github-push"):
+        -
           taskId:
             $eval: as_slugid("decision")
           deadline:
@@ -67,19 +67,7 @@ tasks:
                 && python -m pip install --upgrade pip | grep -v "^[[:space:]]*$"
                 && pip install -r ci/requirements.txt | grep -v "^[[:space:]]*$"
                 && python ci/cloud-image-deploy.py
-  -
-    $let:
-      head_rev:
-        $if: tasks_for == "github-pull-request"
-        then: ${event.pull_request.head.sha}
-        else: ${event.after}
-      repository:
-        $if: tasks_for == "github-pull-request"
-        then: ${event.pull_request.head.repo.html_url}
-        else: ${event.repository.html_url}
-    in:
-      $match:
-        (tasks_for == "github-push"):
+        -
           taskId:
             $eval: as_slugid("rusty")
           deadline:

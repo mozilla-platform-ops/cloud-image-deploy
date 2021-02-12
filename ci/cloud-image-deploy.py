@@ -58,7 +58,7 @@ createTask(
             'git fetch',
             'git checkout {}'.format(commitSha),
             'git reset --hard {}'.format(commitSha),
-            "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh",
+            "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y",
             'export PATH="{}/.cargo/bin:{}"'.format(os.getenv('HOME'), os.getenv('PATH')),
             'cargo build --verbose',
             'cargo test --verbose',

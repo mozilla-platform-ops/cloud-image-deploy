@@ -1,0 +1,7 @@
+---
+description: |+
+    ## relops-3/decision
+    ### staging
+scopes:
+    - auth:sentry:generic-worker
+    - auth:websocktunnel-token:cloudopsstage/*

@@ -46,6 +46,7 @@ with open(secretsPath, 'r') as secretsStream:
                 except taskcluster.exceptions.TaskclusterRestFailure:
                     print(colored('  - role update failed: taskcluster rest failure', 'red'))
                     # todo: check for scope exceptions and notify / correct missing scopes
+                    raise
                 except:
                     print(colored('  - role update failed: {}'.format(sys.exc_info()[0]), 'red'))
 

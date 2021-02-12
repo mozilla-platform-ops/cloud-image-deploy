@@ -4,6 +4,7 @@ production:
         - project/relops/image-builder/dev
     role:
         - repo:github.com/mozilla-platform-ops/cloud-image-deploy:branch:main
+        - worker-pool:relops-3/decision
     pool:
         gecko-t:
             - win7-32-azure
@@ -13,6 +14,7 @@ staging:
         - project/relops/image-builder/dev
     role:
         - repo:github.com/mozilla-platform-ops/cloud-image-deploy:branch:main
+        - worker-pool:relops-3/decision
     pool:
         gecko-t:
             - win7-32-azure

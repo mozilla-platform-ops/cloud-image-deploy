@@ -1,0 +1,7 @@
+---
+description: |+
+    ## relops-3/decision
+    ### production
+scopes:
+    - auth:sentry:generic-worker
+    - auth:websocktunnel-token:firefoxcitc/*

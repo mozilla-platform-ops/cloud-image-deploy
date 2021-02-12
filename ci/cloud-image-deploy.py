@@ -44,27 +44,24 @@ createTask(
     artifacts = [
         #{
         #    'type': 'file',
-        #    'name': 'public/unattend.xml',
-        #    'path': 'unattend.xml'
-        #},
-        #{
-        #    'type': 'file',
-        #    'name': 'public/image-bucket-resource.json',
-        #    'path': 'image-bucket-resource.json'
+        #    'name': 'public/artifact.json',
+        #    'path': 'artifact.json'
         #}
     ],
     commands = [
         '/bin/bash',
         '--login',
         '-c',
-        'git clone https://github.com/mozilla-platform-ops/cloud-image-deploy',
-        '&& cd cloud-image-deploy',
-        '&& git fetch',
-        '&& git checkout {}'.format(commitSha),
-        '&& git reset --hard {}'.format(commitSha),
-        '&& cargo build --verbose',
-        '&& cargo test --verbose',
-        '&& cargo run --verbose'
+        ' && '.join([
+            'git clone https://github.com/mozilla-platform-ops/cloud-image-deploy',
+            'cd cloud-image-deploy',
+            'git fetch',
+            'git checkout {}'.format(commitSha),
+            'git reset --hard {}'.format(commitSha),
+            'cargo build --verbose',
+            'cargo test --verbose',
+            'cargo run --verbose'
+        ])
     ],
     routes = [
         #'index.project.relops.cloud-image-deploy.{}.{}.revision.{}'.format(platform, key, commitSha),

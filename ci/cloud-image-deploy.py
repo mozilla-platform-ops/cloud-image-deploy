@@ -57,12 +57,14 @@ createTask(
         '/bin/bash',
         '--login',
         '-c',
-        'git clone --quiet https://github.com/mozilla-platform-ops/cloud-image-deploy',
+        'git clone https://github.com/mozilla-platform-ops/cloud-image-deploy',
         '&& cd cloud-image-deploy',
         '&& git fetch',
         '&& git checkout {}'.format(commitSha),
         '&& git reset --hard {}'.format(commitSha),
-        '&& cargo run'
+        '&& cargo build --verbose',
+        '&& cargo test --verbose',
+        '&& cargo run --verbose'
     ],
     routes = [
         #'index.project.relops.cloud-image-deploy.{}.{}.revision.{}'.format(platform, key, commitSha),

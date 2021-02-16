@@ -58,8 +58,12 @@ createTask(
             'git fetch',
             'git checkout {}'.format(commitSha),
             'git reset --hard {}'.format(commitSha),
+
+            # todo: figure out why we have to install rust inside of a rust docker image
+            # isn't the point of a rust docker image, that it already has what it needs?
             "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y",
             'source /usr/local/cargo/env',
+
             'cargo build --verbose',
             'cargo test --verbose',
             'cargo run --verbose'

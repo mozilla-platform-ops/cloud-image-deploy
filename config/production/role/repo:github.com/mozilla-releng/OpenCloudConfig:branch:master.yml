@@ -1,0 +1,9 @@
+---
+description:  |+
+    ## repo:github.com/mozilla-releng/OpenCloudConfig:branch:master
+    ### production
+
+    this role is used by [OpenCloudConfig](https://github.com/mozilla-releng/OpenCloudConfig) to bootstrap cloud images
+scopes:
+    - secrets:get:repo:github.com/mozilla-releng/OpenCloudConfig:*
+    - secrets:set:repo:github.com/mozilla-releng/OpenCloudConfig:*

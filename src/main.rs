@@ -123,7 +123,7 @@ struct GenericWorkerConfig {
 
     #[serde(skip_serializing_if = "Option::is_none")]
     #[serde(rename = "livelogPUTPort")]
-    livelog_put_port: Option<usize>,
+    livelog_put_port: Option<u32>,
 
     #[serde(skip_serializing_if = "Option::is_none")]
     number_of_tasks_to_run: Option<usize>,
@@ -147,7 +147,7 @@ struct GenericWorkerConfig {
     taskcluster_proxy_executable: Option<String>,
 
     #[serde(skip_serializing_if = "Option::is_none")]
-    taskcluster_proxy_port: Option<usize>,
+    taskcluster_proxy_port: Option<u32>,
 
     #[serde(skip_serializing_if = "Option::is_none")]
     tasks_dir: Option<String>,
@@ -167,7 +167,14 @@ struct WorkerConfig {
     capacity: Option<usize>,
 
     #[serde(skip_serializing_if = "Option::is_none")]
-    generic_worker: Option<GenericWorkerConfig>,
+    generic_worker: Option<GenericWorker>,
+}
+
+#[derive(Debug, PartialEq, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+struct GenericWorker {
+    #[serde(skip_serializing_if = "Option::is_none")]
+    config: Option<GenericWorkerConfig>,
 }
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
@@ -251,6 +258,7 @@ struct BlockDeviceMapping {
     device_name: Option<String>,
 
     #[serde(skip_serializing_if = "Option::is_none")]
+    #[serde(rename = "Ebs")]
     ebs: Option<Ebs>,
 }
 

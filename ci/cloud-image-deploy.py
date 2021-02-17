@@ -29,7 +29,7 @@ taskGroupId = os.getenv('TASK_ID')
 
 createTask(
     queueClient = queueClient,
-    image = 'rust:1.49.0',
+    image = 'grenade/OpenCloudConfig',
     taskId = slugid.nice(),
     taskName = '01 :: generate ci configuration patches (wip)',
     taskDescription = 'the intention here is to generate patches for ci-config containing updated worker pool configurations',
@@ -58,11 +58,6 @@ createTask(
             'git fetch',
             'git checkout {}'.format(commitSha),
             'git reset --hard {}'.format(commitSha),
-
-            # todo: figure out why we have to install rust inside of a rust docker image
-            # isn't the point of a rust docker image, that it already has what it needs?
-            "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y",
-            'source /usr/local/cargo/env',
 
             'cargo build --verbose',
             'cargo test --verbose',

@@ -1,0 +1,74 @@
+---
+name: cloud-image-deploy
+version: "0.0.1"
+author: Rob Thijssen <rthijssen@gmail.com>
+about: minion manager
+args:
+    - taskcluster-root-url:
+        global: true
+        short: r
+        long: taskcluster-root-url
+        env: TASKCLUSTER_ROOT_URL
+        help: |+
+            the root url of the taskcluster deployment.
+            for example:
+            * https://community-tc.services.mozilla.com
+            * https://firefox-ci-tc.services.mozilla.com
+            * https://stage.taskcluster.nonprod.cloudops.mozgcp.net
+        takes_value: true
+        default_value: https://community-tc.services.mozilla.com
+    #- quiet:
+    #    global: true
+    #    short: q
+    #    long: quiet
+    #    help: suppress stdout
+    - config-folder:
+        global: true
+        short: f
+        long: config-folder
+        help: folder path for snapshots and deployable configuration
+        takes_value: true
+        default_value: ./.config
+    - owner-pattern:
+        global: true
+        short: o
+        long: owner-pattern
+        help: a regular expression to filter worker pool owners by
+        takes_value: true
+        default_value: .*
+    - provider-pattern:
+        global: true
+        short: p
+        long: provider-pattern
+        help: a regular expression to filter worker pool providers by
+        takes_value: true
+        default_value: .*
+    - workerPool-pattern:
+        global: true
+        short: w
+        long: worker-pool-pattern
+        help: a regular expression to filter worker pools by
+        takes_value: true
+        default_value: .*
+    - client-pattern:
+        global: true
+        short: c
+        long: client-pattern
+        help: a regular expression to filter clients by
+        takes_value: true
+        default_value: .*
+    - role-pattern:
+        global: true
+        short: l
+        long: role-pattern
+        help: a regular expression to filter roles by
+        takes_value: true
+        default_value: .*
+subcommands:
+    - snapshot:
+        about: observes and snapshots deployed taskcluster configuration
+        args:
+            - observe-only:
+                short: v
+                long: observe-only
+                help: write to stdout only. skip writing of observed configurations to filesystem

@@ -1,0 +1,59 @@
+---
+name: cloud-image-deploy
+version: "0.0.1"
+author: Rob Thijssen <rthijssen@gmail.com>
+about: minion manager
+args:
+    - taskcluster-root-url:
+        global: true
+        short: r
+        long: taskcluster-root-url
+        env: TASKCLUSTER_ROOT_URL
+        help: |+
+            the root url of the taskcluster deployment.
+            for example:
+            * https://community-tc.services.mozilla.com
+            * https://firefox-ci-tc.services.mozilla.com
+            * https://stage.taskcluster.nonprod.cloudops.mozgcp.net
+        takes_value: true
+        default_value: https://community-tc.services.mozilla.com
+    - client-pattern:
+        global: true
+        short: c
+        long: client-pattern
+        help: a regular expression to filter clients by
+        takes_value: true
+        default_value: .*
+    - role-pattern:
+        global: true
+        short: l
+        long: role-pattern
+        help: a regular expression to filter roles by
+        takes_value: true
+        default_value: .*
+    - workerPool-pattern:
+        global: true
+        short: w
+        long: worker-pool-pattern
+        help: a regular expression to filter worker pools by
+        takes_value: true
+        default_value: .*
+subcommands:
+    - snapshot:
+        about: observes and snapshots deployed taskcluster configuration
+        args:
+            - snapshot-folder:
+                short: s
+                long: snapshot-folder
+                help: folder path for snapshot configurations
+                takes_value: true
+                default_value: .snapshot
+    - deploy:
+        about: deploys taskcluster configurations
+        args:
+            - deploy-folder:
+                short: d
+                long: deploy-folder
+                help: folder path for deploy configurations
+                takes_value: true
+                default_value: .deploy

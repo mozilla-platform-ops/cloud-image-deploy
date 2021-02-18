@@ -61,14 +61,22 @@ createTask(
 
             'cargo build --verbose',
             'cargo test --verbose',
+            # snapshot command:
+            #' '.join([
+            #    'cargo run --',
+            #    'snapshot',
+            #    '--client-pattern "relops"',
+            #    '--role-pattern "relops|mozilla-platform-ops|OpenCloudConfig|worker-pool:.*win.*|workerPool.*win.*"',
+            #    '--worker-pool-pattern "^(relops.*|(gecko|mpd001)-[1-3t]/([bt]-)?win.*)$"',
+            #]),
+            # deploy command:
             ' '.join([
                 'cargo run --',
-                'snapshot',
-                '--client-pattern "relops"',
-                '--role-pattern "relops|mozilla-platform-ops|OpenCloudConfig|worker-pool:.*win.*|workerPool.*win.*"',
+                'deploy',
+                '--client-pattern "deploy-none"',
+                '--role-pattern "deploy-none"',
                 '--worker-pool-pattern "^(relops.*|(gecko|mpd001)-[1-3t]/([bt]-)?win.*)$"',
             ]),
-            #'cargo run --verbose'
         ])
     ],
     routes = [

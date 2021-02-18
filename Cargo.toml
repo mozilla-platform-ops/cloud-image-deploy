@@ -8,6 +8,8 @@ edition = "2018"
 anyhow = "1.0"
 chrono = { version = "0.4", features = ["serde"] }
 clap = {version = "2.33", features = ["yaml"]}
+glob = "0.3"
+phf = { version = "0.8", features = ["macros"] }
 regex = "1.4"
 reqwest = { version = "0.10", features = ["json"] }
 serde = { version = "1.0", features = ["derive"] }

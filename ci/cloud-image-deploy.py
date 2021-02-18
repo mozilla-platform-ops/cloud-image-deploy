@@ -84,7 +84,12 @@ createTask(
         #'index.project.relops.cloud-image-deploy.{}.{}.latest'.format(platform, key)
     ],
     scopes = [
-        #'secrets:get:project/relops/image-deploy/dev'
+        'worker-manager:manage-worker-pool:gecko-1/b-win*',
+        'worker-manager:manage-worker-pool:gecko-1/win*',
+        'worker-manager:manage-worker-pool:gecko-t/t-win*',
+        'worker-manager:manage-worker-pool:gecko-t/win*',
+        'worker-manager:provider:aws',
+        'worker-manager:provider:azure',
     ],
     taskGroupId = taskGroupId
 )

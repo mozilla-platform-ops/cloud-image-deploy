@@ -29,7 +29,7 @@ taskGroupId = os.getenv('TASK_ID')
 
 createTask(
     queueClient = queueClient,
-    image = 'grenade/opencloudconfig',
+    image = 'grenade/opencloudconfig:latest',
     taskId = slugid.nice(),
     taskName = '01 :: generate ci configuration patches (wip)',
     taskDescription = 'the intention here is to generate patches for ci-config containing updated worker pool configurations',

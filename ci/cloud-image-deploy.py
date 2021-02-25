@@ -59,18 +59,20 @@ createTask(
             'git checkout {}'.format(commitSha),
             'git reset --hard {}'.format(commitSha),
 
+            # todo: move the build to a task that only runs when rust source has changed,
+            # instead of building, download the executable from the last successful build task run
             'cargo build --verbose',
             'cargo test --verbose',
-            # snapshot command:
-            #' '.join([
+
+            #' '.join([# snapshot command:
             #    'cargo run --',
             #    'snapshot',
             #    '--client-pattern "relops"',
             #    '--role-pattern "relops|mozilla-platform-ops|OpenCloudConfig|worker-pool:.*win.*|workerPool.*win.*"',
             #    '--worker-pool-pattern "^(relops.*|(gecko|mpd001)-[1-3t]/([bt]-)?win.*)$"',
             #]),
-            # deploy command:
-            ' '.join([
+
+            ' '.join([# deploy command:
                 'cargo run --',
                 'deploy',
                 '--client-pattern "deploy-none"',

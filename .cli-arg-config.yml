@@ -23,37 +23,46 @@ args:
         long: client-pattern
         help: a regular expression to filter clients by
         takes_value: true
-        default_value: .*
+        default_value: \z.
     - role-pattern:
         global: true
         short: l
         long: role-pattern
         help: a regular expression to filter roles by
         takes_value: true
-        default_value: .*
+        default_value: \z.
     - workerPool-pattern:
         global: true
         short: w
         long: worker-pool-pattern
         help: a regular expression to filter worker pools by
         takes_value: true
-        default_value: .*
+        default_value: \z.
+    - deploy-folder:
+        global: true
+        short: d
+        long: deploy-folder
+        help: folder path to write deploy configurations
+        takes_value: true
+        default_value: .deploy
+    - snapshot-folder:
+        global: true
+        short: s
+        long: snapshot-folder
+        help: folder path to read snapshot configurations
+        takes_value: true
+        default_value: .snapshot
 subcommands:
     - snapshot:
         about: observes and snapshots deployed taskcluster configuration
-        args:
-            - snapshot-folder:
-                short: s
-                long: snapshot-folder
-                help: folder path for snapshot configurations
-                takes_value: true
-                default_value: .snapshot
     - deploy:
         about: deploys taskcluster configurations
+    - mutate:
+        about: modifies taskcluster worker pool configurations with altered amis
         args:
-            - deploy-folder:
-                short: d
-                long: deploy-folder
-                help: folder path for deploy configurations
+            - build-sha:
+                short: b
+                long: build-sha
+                help: build sha to obtain ami and deployment ids from
                 takes_value: true
-                default_value: .deploy
+                default_value: latest

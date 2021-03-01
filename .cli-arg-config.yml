@@ -66,3 +66,8 @@ subcommands:
                 help: build sha to obtain ami and deployment ids from
                 takes_value: true
                 default_value: latest
+            - owner:
+                short: o
+                long: owner
+                help: email address of configuration owner
+                takes_value: true

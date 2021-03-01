@@ -611,7 +611,7 @@ config:
     reregistrationTimeout: 345600
   maxCapacity: 600
   minCapacity: 0
-description: "*DO NOT EDIT* - This resource is configured automatically by [ci-admin](https://hg.mozilla.org/ci/ci-admin).\n\n"
-emailOnError: false
-owner: release+tc-workers@mozilla.com
+description: "## gecko-t/t-win7-32-gpu-b\n### production\n\nthis pool configuration is managed by [cloud-image-deploy](https://github.com/mozilla-platform-ops/cloud-image-deploy).\n\nto make persistent changes to this pool configuration, submit a pull request for [gecko-t/t-win7-32-gpu-b.yml](https://github.com/mozilla-platform-ops/cloud-image-deploy/blob/main/.deploy/production/workerPool/gecko-t/t-win7-32-gpu-b.yml)."
+emailOnError: true
+owner: grenade@mozilla.com
 providerId: aws

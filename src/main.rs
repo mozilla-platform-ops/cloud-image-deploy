@@ -304,6 +304,11 @@ async fn mutate(entity: &str, args: &clap::ArgMatches<'_>) {
                                     },
                                     None => {}
                                 };
+                                item_yaml_value["description"] = serde_yaml::Value::String(format!("## {}\n### {}\n\nthis pool configuration is managed by [cloud-image-deploy](https://github.com/mozilla-platform-ops/cloud-image-deploy).\n\nto make persistent changes to this pool configuration, submit a pull request for [{}.yml](https://github.com/mozilla-platform-ops/cloud-image-deploy/blob/main/.deploy/production/workerPool/{}.yml).", item_id, TASKCLUSTER_DEPLOYMENTS[taskcluster_root_url], item_id, item_id));
+                                if args.is_present("owner") {
+                                    item_yaml_value["owner"] = serde_yaml::Value::String(args.value_of("owner").unwrap().to_string());
+                                    item_yaml_value["emailOnError"] = serde_yaml::Value::Bool(true);
+                                }
                                 //serde_yaml::to_writer(std::io::stdout(), &item_yaml_value).unwrap();
                                 let item_deploy_yaml_file_path = format!("{}/{}.yml", deploy_folder, item_id);
                                 std::fs::create_dir_all(std::path::Path::new(&item_deploy_yaml_file_path).parent().unwrap()).unwrap();

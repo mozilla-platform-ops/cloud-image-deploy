@@ -230,7 +230,7 @@ async fn mutate(entity: &str, args: &clap::ArgMatches<'_>) {
                                                                                     Some(tasks) => match tasks.iter().find(
                                                                                         |x| {
                                                                                             // filter for completed task with worker type in name
-                                                                                            x.as_object().unwrap().get("task").unwrap().as_object().unwrap().get("metadata").unwrap().as_object().unwrap().get("name").unwrap().as_str().unwrap() == &format!("Update {} AMIs", item_id.replace("/", "-"))
+                                                                                            x.as_object().unwrap().get("task").unwrap().as_object().unwrap().get("metadata").unwrap().as_object().unwrap().get("name").unwrap().as_str().unwrap() == &format!("Update {} AMIs", item_id.replace("/", "-").replace("gecko-t-t-", "gecko-t-"))
                                                                                             && x.as_object().unwrap().get("status").unwrap().as_object().unwrap().get("state").unwrap().as_str().unwrap() == "completed"
                                                                                         }) {
                                                                                         Some(task_container) => match taskcluster_client.queue.getLatestArtifact_url(task_container.as_object().unwrap().get("status").unwrap().as_object().unwrap().get("taskId").unwrap().as_str().unwrap(), "public/ami-latest.json") {

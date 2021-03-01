@@ -1,0 +1,666 @@
+---
+config:
+  launchConfigs:
+    - additionalUserData:
+        workerType: gecko-t-win10-64
+      capacityPerInstance: 1
+      launchConfig:
+        BlockDeviceMappings:
+          - DeviceName: /dev/xvda
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+          - DeviceName: xvdf
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+        ImageId: ami-0ddbe87854167dd48
+        InstanceMarketOptions:
+          MarketType: spot
+        InstanceType: c5.2xlarge
+        Placement:
+          AvailabilityZone: eu-central-1a
+        SecurityGroupIds:
+          - sg-c03e0eab
+          - sg-e43d0d8f
+        SubnetId: subnet-935645fb
+      region: eu-central-1
+      workerConfig:
+        capacity: 1
+        genericWorker:
+          config:
+            cachesDir: "Z:\\caches"
+            cleanUpTaskDirs: true
+            deploymentId: 42ae470
+            disableReboots: true
+            downloadsDir: "Z:\\downloads"
+            ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
+            idleTimeoutSecs: 1
+            livelogExecutable: "C:\\generic-worker\\livelog.exe"
+            livelogPUTPort: 60022
+            numberOfTasksToRun: 0
+            runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
+            runTasksAsCurrentUser: false
+            sentryProject: generic-worker
+            shutdownMachineOnIdle: false
+            shutdownMachineOnInternalError: true
+            taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
+            taskclusterProxyPort: 80
+            tasksDir: "Z:\\"
+            wstAudience: firefoxcitc
+            wstServerURL: "https://firefoxci-websocktunnel.services.mozilla.com/"
+    - additionalUserData:
+        workerType: gecko-t-win10-64
+      capacityPerInstance: 1
+      launchConfig:
+        BlockDeviceMappings:
+          - DeviceName: /dev/xvda
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+          - DeviceName: xvdf
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+        ImageId: ami-0ddbe87854167dd48
+        InstanceMarketOptions:
+          MarketType: spot
+        InstanceType: c5.2xlarge
+        Placement:
+          AvailabilityZone: eu-central-1b
+        SecurityGroupIds:
+          - sg-c03e0eab
+          - sg-e43d0d8f
+        SubnetId: subnet-6988da13
+      region: eu-central-1
+      workerConfig:
+        capacity: 1
+        genericWorker:
+          config:
+            cachesDir: "Z:\\caches"
+            cleanUpTaskDirs: true
+            deploymentId: 42ae470
+            disableReboots: true
+            downloadsDir: "Z:\\downloads"
+            ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
+            idleTimeoutSecs: 1
+            livelogExecutable: "C:\\generic-worker\\livelog.exe"
+            livelogPUTPort: 60022
+            numberOfTasksToRun: 0
+            runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
+            runTasksAsCurrentUser: false
+            sentryProject: generic-worker
+            shutdownMachineOnIdle: false
+            shutdownMachineOnInternalError: true
+            taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
+            taskclusterProxyPort: 80
+            tasksDir: "Z:\\"
+            wstAudience: firefoxcitc
+            wstServerURL: "https://firefoxci-websocktunnel.services.mozilla.com/"
+    - additionalUserData:
+        workerType: gecko-t-win10-64
+      capacityPerInstance: 1
+      launchConfig:
+        BlockDeviceMappings:
+          - DeviceName: /dev/xvda
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+          - DeviceName: xvdf
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+        ImageId: ami-0ddbe87854167dd48
+        InstanceMarketOptions:
+          MarketType: spot
+        InstanceType: c5.2xlarge
+        Placement:
+          AvailabilityZone: eu-central-1c
+        SecurityGroupIds:
+          - sg-c03e0eab
+          - sg-e43d0d8f
+        SubnetId: subnet-114d525b
+      region: eu-central-1
+      workerConfig:
+        capacity: 1
+        genericWorker:
+          config:
+            cachesDir: "Z:\\caches"
+            cleanUpTaskDirs: true
+            deploymentId: 42ae470
+            disableReboots: true
+            downloadsDir: "Z:\\downloads"
+            ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
+            idleTimeoutSecs: 1
+            livelogExecutable: "C:\\generic-worker\\livelog.exe"
+            livelogPUTPort: 60022
+            numberOfTasksToRun: 0
+            runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
+            runTasksAsCurrentUser: false
+            sentryProject: generic-worker
+            shutdownMachineOnIdle: false
+            shutdownMachineOnInternalError: true
+            taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
+            taskclusterProxyPort: 80
+            tasksDir: "Z:\\"
+            wstAudience: firefoxcitc
+            wstServerURL: "https://firefoxci-websocktunnel.services.mozilla.com/"
+    - additionalUserData:
+        workerType: gecko-t-win10-64
+      capacityPerInstance: 1
+      launchConfig:
+        BlockDeviceMappings:
+          - DeviceName: /dev/xvda
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+          - DeviceName: xvdf
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+        ImageId: ami-023af4c6247a2262e
+        InstanceMarketOptions:
+          MarketType: spot
+        InstanceType: c5.2xlarge
+        Placement:
+          AvailabilityZone: us-east-1a
+        SecurityGroupIds:
+          - sg-0dc9337d
+          - sg-27d72d57
+        SubnetId: subnet-566e060c
+      region: us-east-1
+      workerConfig:
+        capacity: 1
+        genericWorker:
+          config:
+            cachesDir: "Z:\\caches"
+            cleanUpTaskDirs: true
+            deploymentId: 42ae470
+            disableReboots: true
+            downloadsDir: "Z:\\downloads"
+            ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
+            idleTimeoutSecs: 1
+            livelogExecutable: "C:\\generic-worker\\livelog.exe"
+            livelogPUTPort: 60022
+            numberOfTasksToRun: 0
+            runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
+            runTasksAsCurrentUser: false
+            sentryProject: generic-worker
+            shutdownMachineOnIdle: false
+            shutdownMachineOnInternalError: true
+            taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
+            taskclusterProxyPort: 80
+            tasksDir: "Z:\\"
+            wstAudience: firefoxcitc
+            wstServerURL: "https://firefoxci-websocktunnel.services.mozilla.com/"
+    - additionalUserData:
+        workerType: gecko-t-win10-64
+      capacityPerInstance: 1
+      launchConfig:
+        BlockDeviceMappings:
+          - DeviceName: /dev/xvda
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+          - DeviceName: xvdf
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+        ImageId: ami-023af4c6247a2262e
+        InstanceMarketOptions:
+          MarketType: spot
+        InstanceType: c5.2xlarge
+        Placement:
+          AvailabilityZone: us-east-1b
+        SecurityGroupIds:
+          - sg-0dc9337d
+          - sg-27d72d57
+        SubnetId: subnet-f2c93496
+      region: us-east-1
+      workerConfig:
+        capacity: 1
+        genericWorker:
+          config:
+            cachesDir: "Z:\\caches"
+            cleanUpTaskDirs: true
+            deploymentId: 42ae470
+            disableReboots: true
+            downloadsDir: "Z:\\downloads"
+            ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
+            idleTimeoutSecs: 1
+            livelogExecutable: "C:\\generic-worker\\livelog.exe"
+            livelogPUTPort: 60022
+            numberOfTasksToRun: 0
+            runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
+            runTasksAsCurrentUser: false
+            sentryProject: generic-worker
+            shutdownMachineOnIdle: false
+            shutdownMachineOnInternalError: true
+            taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
+            taskclusterProxyPort: 80
+            tasksDir: "Z:\\"
+            wstAudience: firefoxcitc
+            wstServerURL: "https://firefoxci-websocktunnel.services.mozilla.com/"
+    - additionalUserData:
+        workerType: gecko-t-win10-64
+      capacityPerInstance: 1
+      launchConfig:
+        BlockDeviceMappings:
+          - DeviceName: /dev/xvda
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+          - DeviceName: xvdf
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+        ImageId: ami-023af4c6247a2262e
+        InstanceMarketOptions:
+          MarketType: spot
+        InstanceType: c5.2xlarge
+        Placement:
+          AvailabilityZone: us-east-1c
+        SecurityGroupIds:
+          - sg-0dc9337d
+          - sg-27d72d57
+        SubnetId: subnet-c52454e9
+      region: us-east-1
+      workerConfig:
+        capacity: 1
+        genericWorker:
+          config:
+            cachesDir: "Z:\\caches"
+            cleanUpTaskDirs: true
+            deploymentId: 42ae470
+            disableReboots: true
+            downloadsDir: "Z:\\downloads"
+            ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
+            idleTimeoutSecs: 1
+            livelogExecutable: "C:\\generic-worker\\livelog.exe"
+            livelogPUTPort: 60022
+            numberOfTasksToRun: 0
+            runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
+            runTasksAsCurrentUser: false
+            sentryProject: generic-worker
+            shutdownMachineOnIdle: false
+            shutdownMachineOnInternalError: true
+            taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
+            taskclusterProxyPort: 80
+            tasksDir: "Z:\\"
+            wstAudience: firefoxcitc
+            wstServerURL: "https://firefoxci-websocktunnel.services.mozilla.com/"
+    - additionalUserData:
+        workerType: gecko-t-win10-64
+      capacityPerInstance: 1
+      launchConfig:
+        BlockDeviceMappings:
+          - DeviceName: /dev/xvda
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+          - DeviceName: xvdf
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+        ImageId: ami-023af4c6247a2262e
+        InstanceMarketOptions:
+          MarketType: spot
+        InstanceType: c5.2xlarge
+        Placement:
+          AvailabilityZone: us-east-1d
+        SecurityGroupIds:
+          - sg-0dc9337d
+          - sg-27d72d57
+        SubnetId: subnet-e7e6ccaf
+      region: us-east-1
+      workerConfig:
+        capacity: 1
+        genericWorker:
+          config:
+            cachesDir: "Z:\\caches"
+            cleanUpTaskDirs: true
+            deploymentId: 42ae470
+            disableReboots: true
+            downloadsDir: "Z:\\downloads"
+            ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
+            idleTimeoutSecs: 1
+            livelogExecutable: "C:\\generic-worker\\livelog.exe"
+            livelogPUTPort: 60022
+            numberOfTasksToRun: 0
+            runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
+            runTasksAsCurrentUser: false
+            sentryProject: generic-worker
+            shutdownMachineOnIdle: false
+            shutdownMachineOnInternalError: true
+            taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
+            taskclusterProxyPort: 80
+            tasksDir: "Z:\\"
+            wstAudience: firefoxcitc
+            wstServerURL: "https://firefoxci-websocktunnel.services.mozilla.com/"
+    - additionalUserData:
+        workerType: gecko-t-win10-64
+      capacityPerInstance: 1
+      launchConfig:
+        BlockDeviceMappings:
+          - DeviceName: /dev/xvda
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+          - DeviceName: xvdf
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+        ImageId: ami-023af4c6247a2262e
+        InstanceMarketOptions:
+          MarketType: spot
+        InstanceType: c5.2xlarge
+        Placement:
+          AvailabilityZone: us-east-1f
+        SecurityGroupIds:
+          - sg-0dc9337d
+          - sg-27d72d57
+        SubnetId: subnet-7f720d73
+      region: us-east-1
+      workerConfig:
+        capacity: 1
+        genericWorker:
+          config:
+            cachesDir: "Z:\\caches"
+            cleanUpTaskDirs: true
+            deploymentId: 42ae470
+            disableReboots: true
+            downloadsDir: "Z:\\downloads"
+            ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
+            idleTimeoutSecs: 1
+            livelogExecutable: "C:\\generic-worker\\livelog.exe"
+            livelogPUTPort: 60022
+            numberOfTasksToRun: 0
+            runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
+            runTasksAsCurrentUser: false
+            sentryProject: generic-worker
+            shutdownMachineOnIdle: false
+            shutdownMachineOnInternalError: true
+            taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
+            taskclusterProxyPort: 80
+            tasksDir: "Z:\\"
+            wstAudience: firefoxcitc
+            wstServerURL: "https://firefoxci-websocktunnel.services.mozilla.com/"
+    - additionalUserData:
+        workerType: gecko-t-win10-64
+      capacityPerInstance: 1
+      launchConfig:
+        BlockDeviceMappings:
+          - DeviceName: /dev/xvda
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+          - DeviceName: xvdf
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+        ImageId: ami-0bfe1f0c619c26952
+        InstanceMarketOptions:
+          MarketType: spot
+        InstanceType: c5.2xlarge
+        Placement:
+          AvailabilityZone: us-west-1b
+        SecurityGroupIds:
+          - sg-5be3283d
+          - sg-fee02b98
+        SubnetId: subnet-7641632e
+      region: us-west-1
+      workerConfig:
+        capacity: 1
+        genericWorker:
+          config:
+            cachesDir: "Z:\\caches"
+            cleanUpTaskDirs: true
+            deploymentId: 42ae470
+            disableReboots: true
+            downloadsDir: "Z:\\downloads"
+            ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
+            idleTimeoutSecs: 1
+            livelogExecutable: "C:\\generic-worker\\livelog.exe"
+            livelogPUTPort: 60022
+            numberOfTasksToRun: 0
+            runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
+            runTasksAsCurrentUser: false
+            sentryProject: generic-worker
+            shutdownMachineOnIdle: false
+            shutdownMachineOnInternalError: true
+            taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
+            taskclusterProxyPort: 80
+            tasksDir: "Z:\\"
+            wstAudience: firefoxcitc
+            wstServerURL: "https://firefoxci-websocktunnel.services.mozilla.com/"
+    - additionalUserData:
+        workerType: gecko-t-win10-64
+      capacityPerInstance: 1
+      launchConfig:
+        BlockDeviceMappings:
+          - DeviceName: /dev/xvda
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+          - DeviceName: xvdf
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+        ImageId: ami-0bfe1f0c619c26952
+        InstanceMarketOptions:
+          MarketType: spot
+        InstanceType: c5.2xlarge
+        Placement:
+          AvailabilityZone: us-west-1c
+        SecurityGroupIds:
+          - sg-5be3283d
+          - sg-fee02b98
+        SubnetId: subnet-48a9b82c
+      region: us-west-1
+      workerConfig:
+        capacity: 1
+        genericWorker:
+          config:
+            cachesDir: "Z:\\caches"
+            cleanUpTaskDirs: true
+            deploymentId: 42ae470
+            disableReboots: true
+            downloadsDir: "Z:\\downloads"
+            ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
+            idleTimeoutSecs: 1
+            livelogExecutable: "C:\\generic-worker\\livelog.exe"
+            livelogPUTPort: 60022
+            numberOfTasksToRun: 0
+            runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
+            runTasksAsCurrentUser: false
+            sentryProject: generic-worker
+            shutdownMachineOnIdle: false
+            shutdownMachineOnInternalError: true
+            taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
+            taskclusterProxyPort: 80
+            tasksDir: "Z:\\"
+            wstAudience: firefoxcitc
+            wstServerURL: "https://firefoxci-websocktunnel.services.mozilla.com/"
+    - additionalUserData:
+        workerType: gecko-t-win10-64
+      capacityPerInstance: 1
+      launchConfig:
+        BlockDeviceMappings:
+          - DeviceName: /dev/xvda
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+          - DeviceName: xvdf
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+        ImageId: ami-0120f09b0b0826a8f
+        InstanceMarketOptions:
+          MarketType: spot
+        InstanceType: c5.2xlarge
+        Placement:
+          AvailabilityZone: us-west-2a
+        SecurityGroupIds:
+          - sg-09d6be73
+          - sg-3bd7bf41
+        SubnetId: subnet-d948b6bf
+      region: us-west-2
+      workerConfig:
+        capacity: 1
+        genericWorker:
+          config:
+            cachesDir: "Z:\\caches"
+            cleanUpTaskDirs: true
+            deploymentId: 42ae470
+            disableReboots: true
+            downloadsDir: "Z:\\downloads"
+            ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
+            idleTimeoutSecs: 1
+            livelogExecutable: "C:\\generic-worker\\livelog.exe"
+            livelogPUTPort: 60022
+            numberOfTasksToRun: 0
+            runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
+            runTasksAsCurrentUser: false
+            sentryProject: generic-worker
+            shutdownMachineOnIdle: false
+            shutdownMachineOnInternalError: true
+            taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
+            taskclusterProxyPort: 80
+            tasksDir: "Z:\\"
+            wstAudience: firefoxcitc
+            wstServerURL: "https://firefoxci-websocktunnel.services.mozilla.com/"
+    - additionalUserData:
+        workerType: gecko-t-win10-64
+      capacityPerInstance: 1
+      launchConfig:
+        BlockDeviceMappings:
+          - DeviceName: /dev/xvda
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+          - DeviceName: xvdf
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+        ImageId: ami-0120f09b0b0826a8f
+        InstanceMarketOptions:
+          MarketType: spot
+        InstanceType: c5.2xlarge
+        Placement:
+          AvailabilityZone: us-west-2b
+        SecurityGroupIds:
+          - sg-09d6be73
+          - sg-3bd7bf41
+        SubnetId: subnet-2eaaba67
+      region: us-west-2
+      workerConfig:
+        capacity: 1
+        genericWorker:
+          config:
+            cachesDir: "Z:\\caches"
+            cleanUpTaskDirs: true
+            deploymentId: 42ae470
+            disableReboots: true
+            downloadsDir: "Z:\\downloads"
+            ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
+            idleTimeoutSecs: 1
+            livelogExecutable: "C:\\generic-worker\\livelog.exe"
+            livelogPUTPort: 60022
+            numberOfTasksToRun: 0
+            runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
+            runTasksAsCurrentUser: false
+            sentryProject: generic-worker
+            shutdownMachineOnIdle: false
+            shutdownMachineOnInternalError: true
+            taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
+            taskclusterProxyPort: 80
+            tasksDir: "Z:\\"
+            wstAudience: firefoxcitc
+            wstServerURL: "https://firefoxci-websocktunnel.services.mozilla.com/"
+    - additionalUserData:
+        workerType: gecko-t-win10-64
+      capacityPerInstance: 1
+      launchConfig:
+        BlockDeviceMappings:
+          - DeviceName: /dev/xvda
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+          - DeviceName: xvdf
+            Ebs:
+              DeleteOnTermination: true
+              VolumeSize: 120
+              VolumeType: gp2
+        ImageId: ami-0120f09b0b0826a8f
+        InstanceMarketOptions:
+          MarketType: spot
+        InstanceType: c5.2xlarge
+        Placement:
+          AvailabilityZone: us-west-2c
+        SecurityGroupIds:
+          - sg-09d6be73
+          - sg-3bd7bf41
+        SubnetId: subnet-540a9f0f
+      region: us-west-2
+      workerConfig:
+        capacity: 1
+        genericWorker:
+          config:
+            cachesDir: "Z:\\caches"
+            cleanUpTaskDirs: true
+            deploymentId: 42ae470
+            disableReboots: true
+            downloadsDir: "Z:\\downloads"
+            ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
+            idleTimeoutSecs: 1
+            livelogExecutable: "C:\\generic-worker\\livelog.exe"
+            livelogPUTPort: 60022
+            numberOfTasksToRun: 0
+            runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
+            runTasksAsCurrentUser: false
+            sentryProject: generic-worker
+            shutdownMachineOnIdle: false
+            shutdownMachineOnInternalError: true
+            taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
+            taskclusterProxyPort: 80
+            tasksDir: "Z:\\"
+            wstAudience: firefoxcitc
+            wstServerURL: "https://firefoxci-websocktunnel.services.mozilla.com/"
+  lifecycle:
+    registrationTimeout: 1800
+    reregistrationTimeout: 345600
+  maxCapacity: 1024
+  minCapacity: 0
+created: "2019-11-06T21:00:05.629Z"
+currentCapacity: 30
+description: "*DO NOT EDIT* - This resource is configured automatically by [ci-admin](https://hg.mozilla.org/ci/ci-admin).\n\n"
+emailOnError: false
+lastModified: "2020-10-28T10:41:47.055Z"
+owner: release+tc-workers@mozilla.com
+providerId: aws
+workerPoolId: gecko-t/t-win10-64

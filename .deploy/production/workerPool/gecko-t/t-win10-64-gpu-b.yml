@@ -556,11 +556,7 @@ config:
     reregistrationTimeout: 345600
   maxCapacity: 512
   minCapacity: 0
-created: "2019-11-06T21:00:06.447Z"
-currentCapacity: 5
 description: "*DO NOT EDIT* - This resource is configured automatically by [ci-admin](https://hg.mozilla.org/ci/ci-admin).\n\n"
 emailOnError: false
-lastModified: "2020-10-28T10:41:46.788Z"
 owner: release+tc-workers@mozilla.com
 providerId: aws
-workerPoolId: gecko-t/t-win10-64-gpu-s

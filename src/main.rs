@@ -296,6 +296,14 @@ async fn mutate(entity: &str, args: &clap::ArgMatches<'_>) {
                                     },
                                     unsupported_entity => panic!("unsupported entity: {}", unsupported_entity)
                                 };
+                                match item_yaml_value.as_mapping_mut() {
+                                    Some(item_yaml_mapping_mut) => {
+                                        for disallowed_value in ["created", "currentCapacity", "lastModified", "workerPoolId"].iter() {
+                                            match item_yaml_mapping_mut.remove(&serde_yaml::Value::String(disallowed_value.to_string())) { _ => {} }
+                                        }
+                                    },
+                                    None => {}
+                                };
                                 //serde_yaml::to_writer(std::io::stdout(), &item_yaml_value).unwrap();
                                 let item_deploy_yaml_file_path = format!("{}/{}.yml", deploy_folder, item_id);
                                 std::fs::create_dir_all(std::path::Path::new(&item_deploy_yaml_file_path).parent().unwrap()).unwrap();

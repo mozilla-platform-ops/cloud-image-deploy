@@ -75,8 +75,6 @@ createTask(
             ' '.join([# deploy command:
                 'cargo run --',
                 'deploy',
-                '--client-pattern "deploy-none"',
-                '--role-pattern "deploy-none"',
                 '--worker-pool-pattern "^(relops.*|(gecko|mpd001)-[1-3t]/([bt]-)?win.*)$"',
             ]),
         ])

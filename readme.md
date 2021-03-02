@@ -11,10 +11,57 @@ example use cases include:
 
 it is important to note that changes made by this application to taskcluster worker pool configurations are not permanent and will be overwritten any time ci-admin is run and the configurations here do not match the configurations in ci-configuration.
 
+this repository and application is evolving. there are currently two distinct implementations.
+* the new rust implemntation has three subcommand implementations:
+  * the **snapshot** subcommand queries taskcluster endpoints and creates yaml configuration files representing its observations in the **/.snapshot** folder
+  * the **mutate** subcommand queries bootstrap repository endpoints (so far just [occ](https://github.com/mozilla-releng/OpenCloudConfig), but a ronin implementation is envisaged) and mutates yaml configuration files from the **/.snapshot** folder into modified configurations in the **/.deploy** folder
+  * the **deploy** subcommand interacts with taskcluster endpoints to deploy configurations found in the **/.deploy** folder
+* the original python implementation deploys taskcluster configurations defined in the **/config** folder
+
+### new rust implementation
+
+#### installation
+
+* clone this repository
+  ```
+  git clone https://github.com/mozilla-platform-ops/cloud-image-deploy.git
+  ```
+* install (rust) dependencies
+  ```
+  sudo dnf dnf install -y cmake gcc openssl-devel
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+  ```
+
+#### usage
+
+the most useful use case for this implementation is to create or update worker pools when new machine images (amis) have been built (or we want to revert to old amis). to accomplish this, use the following steps (example commands will modify all windows **beta** worker pools in the taskcluster **staging** deployment):
+1. create a snapshot of existing taskcluster configurations (if they don't exist, snapshot a similar configuration and modify its filename and contents afterwards):
+   ```
+   cargo run -- snapshot \
+     --taskcluster-root-url https://stage.taskcluster.nonprod.cloudops.mozgcp.net \
+     --worker-pool-pattern "^gecko-[1t]/[bt]-win(7-32|10-64|2012)-(beta|gpu-b)$"
+   ```
+2. mutate the snapshot configurations with regional amis from a specific bootstrap image build sha:
+   ```
+   cargo run -- mutate \
+     --taskcluster-root-url https://firefox-ci-tc.services.mozilla.com \
+     --worker-pool-pattern "^gecko-[1t]/[bt]-win(7-32|10-64|2012)-(beta|gpu-b)$" \
+     --build-sha "mozilla-releng/OpenCloudConfig/971519d335bd8c7173cb786546fa95b351e3866a" \
+     --owner grenade@mozilla.com
+   ```
+3. deploy the mutated configurations from the deploy folder (use this command locally if you want to test configurations that you are unsure of. if you know the configurations are good, you can just commit and push an updated `/.deploy` folder and let the repo ci run the deploy step):
+   ```
+   cargo run -- deploy \
+     --taskcluster-root-url https://firefox-ci-tc.services.mozilla.com \
+     --worker-pool-pattern "^gecko-[1t]/[bt]-win(7-32|10-64|2012)-(beta|gpu-b)$"
+   ```
+
+### original python implementation
+
 * production deployments are currently possible, but disabled.
 * some configuration files are renamed with a `.yaml` (instead of `.yml`) extension. these are useful to have in the repo for templating purposes, but are **not deployed** on push.
 
-### installation
+#### installation
 
 * clone this repository
   ```
@@ -26,7 +73,7 @@ it is important to note that changes made by this application to taskcluster wor
   pip3 install --user taskcluster pyyaml
   ```
 
-### configuration
+#### configuration
 
 * create or modify a worker pool definition in the config folder.
   * client definition config paths use the convention: `config/$environment/client/$clientId.yml` (where $clientId may contain path separators)
@@ -34,7 +81,7 @@ it is important to note that changes made by this application to taskcluster wor
   * role definition config paths use the convention: `config/$environment/role/$roleId.yml` (where $roleId may contain path separators)
   ```
 
-### configuration (for running locally)
+#### configuration (for running locally)
 these steps only apply to running cloud-image-deploy locally. if you push modified (client/pool/role) configurations (using path conventions), they will deploy.
 
 * modify `config/deploy-on-push.yml` to include only the pool definitions you wish to update. **take extra care here**. changes here can overwrite other peoples efforts and modify production worker pools. take care to only include pool definitions you are responsible for and remove or comment all other pool ids.
@@ -56,7 +103,7 @@ these steps only apply to running cloud-image-deploy locally. if you push modifi
       ```
 * create `config/taskcluster-client-options.yml` using `config/taskcluster-client-options-example.yml` as a template
 
-### usage (for running locally)
+#### usage (for running locally)
 ```bash
 # obtain credentials using taskcluster-cli
 set_session_credentials.sh

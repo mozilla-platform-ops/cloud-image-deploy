@@ -33,7 +33,6 @@ config:
         SubnetId: subnet-935645fb
       region: eu-central-1
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -88,7 +87,6 @@ config:
         SubnetId: subnet-935645fb
       region: eu-central-1
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -143,7 +141,6 @@ config:
         SubnetId: subnet-6988da13
       region: eu-central-1
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -198,7 +195,6 @@ config:
         SubnetId: subnet-6988da13
       region: eu-central-1
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -253,7 +249,6 @@ config:
         SubnetId: subnet-114d525b
       region: eu-central-1
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -308,7 +303,6 @@ config:
         SubnetId: subnet-114d525b
       region: eu-central-1
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -363,7 +357,6 @@ config:
         SubnetId: subnet-566e060c
       region: us-east-1
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -418,7 +411,6 @@ config:
         SubnetId: subnet-566e060c
       region: us-east-1
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -473,7 +465,6 @@ config:
         SubnetId: subnet-f2c93496
       region: us-east-1
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -528,7 +519,6 @@ config:
         SubnetId: subnet-f2c93496
       region: us-east-1
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -583,7 +573,6 @@ config:
         SubnetId: subnet-c52454e9
       region: us-east-1
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -638,7 +627,6 @@ config:
         SubnetId: subnet-c52454e9
       region: us-east-1
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -693,7 +681,6 @@ config:
         SubnetId: subnet-e7e6ccaf
       region: us-east-1
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -748,7 +735,6 @@ config:
         SubnetId: subnet-e7e6ccaf
       region: us-east-1
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -803,7 +789,6 @@ config:
         SubnetId: subnet-deb5a8e2
       region: us-east-1
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -858,7 +843,6 @@ config:
         SubnetId: subnet-7f720d73
       region: us-east-1
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -913,7 +897,6 @@ config:
         SubnetId: subnet-7f720d73
       region: us-east-1
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -968,7 +951,6 @@ config:
         SubnetId: subnet-7641632e
       region: us-west-1
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -1023,7 +1005,6 @@ config:
         SubnetId: subnet-7641632e
       region: us-west-1
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -1078,7 +1059,6 @@ config:
         SubnetId: subnet-48a9b82c
       region: us-west-1
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -1133,7 +1113,6 @@ config:
         SubnetId: subnet-48a9b82c
       region: us-west-1
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -1188,7 +1167,6 @@ config:
         SubnetId: subnet-d948b6bf
       region: us-west-2
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -1243,7 +1221,6 @@ config:
         SubnetId: subnet-d948b6bf
       region: us-west-2
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -1298,7 +1275,6 @@ config:
         SubnetId: subnet-2eaaba67
       region: us-west-2
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -1353,7 +1329,6 @@ config:
         SubnetId: subnet-2eaaba67
       region: us-west-2
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -1408,7 +1383,6 @@ config:
         SubnetId: subnet-540a9f0f
       region: us-west-2
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"
@@ -1463,7 +1437,6 @@ config:
         SubnetId: subnet-540a9f0f
       region: us-west-2
       workerConfig:
-        capacity: 1
         genericWorker:
           config:
             cachesDir: "Z:\\caches"

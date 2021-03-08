@@ -88,6 +88,11 @@ createTask(
         #'index.project.relops.cloud-image-deploy.{}.{}.latest'.format(platform, key)
     ],
     scopes = [
+        'queue:create-task:highest:gecko-1/b-win*',
+        'queue:create-task:highest:gecko-1/win*',
+        'queue:create-task:highest:gecko-t/t-win*',
+        'queue:create-task:highest:gecko-t/win*',
+        'queue:scheduler-id:taskcluster-github',
         'worker-manager:manage-worker-pool:gecko-1/b-win*',
         'worker-manager:manage-worker-pool:gecko-1/win*',
         'worker-manager:manage-worker-pool:gecko-t/t-win*',

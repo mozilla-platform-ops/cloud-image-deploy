@@ -43,7 +43,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -97,7 +96,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -151,7 +149,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -205,7 +202,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -259,7 +255,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -313,7 +308,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -367,7 +361,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -421,7 +414,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -475,7 +467,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -529,7 +520,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -583,7 +573,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -637,7 +626,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -691,7 +679,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -745,7 +732,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -799,7 +785,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -853,7 +838,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -907,7 +891,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -961,7 +944,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -1015,7 +997,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -1069,7 +1050,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -1123,7 +1103,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -1177,7 +1156,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -1231,7 +1209,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -1285,7 +1262,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -1339,7 +1315,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -1393,7 +1368,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
@@ -1447,7 +1421,6 @@ config:
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
-            livelogPUTPort: 60022
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false

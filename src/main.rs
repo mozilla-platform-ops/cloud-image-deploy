@@ -152,7 +152,7 @@ async fn deploy(entity: &str, args: &clap::ArgMatches<'_>) {
                                                 "name": &format!("02 :: validate {}", item_id),
                                                 "description": &format!("validate task worthiness of {} after pool config mutation", item_id),
                                                 "owner": "relops@mozilla.com",
-                                                "source": "https://github.com/mozilla-platform-ops/cloud-image-deploy/commit/{commit}",
+                                                "source": &format!("https://github.com/mozilla-platform-ops/cloud-image-deploy/commit/{}", std::env::var("GITHUB_HEAD_SHA").unwrap()),
                                             },
                                             "schedulerId": "taskcluster-github",
                                             "taskGroupId": std::env::var("TASK_GROUP_ID").unwrap()

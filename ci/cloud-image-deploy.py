@@ -48,6 +48,10 @@ createTask(
         #    'path': 'artifact.json'
         #}
     ],
+    env = {
+        'GITHUB_HEAD_SHA': commitSha,
+        'TASK_GROUP_ID': taskGroupId,
+    },
     commands = [
         '/bin/bash',
         '--login',

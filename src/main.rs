@@ -1,5 +1,9 @@
 pub mod tc;
 
+use chrono::{
+    Duration,
+    Utc
+};
 use clap::{
     App,
     load_yaml
@@ -12,6 +16,8 @@ use phf::{
 use itertools::Itertools;
 use regex::Regex;
 use reqwest::header;
+use serde_json::json;
+use slugid::nice;
 use std::{
     collections::HashMap,
     env,
@@ -100,23 +106,63 @@ async fn deploy(entity: &str, args: &clap::ArgMatches<'_>) {
                                 Err(item_yaml_open_error) => panic!("open {} yaml error: {:?}", entity, item_yaml_open_error)
                             };
                             let local_item_json_value: serde_json::Value = serde_json::to_value(item_yaml_value).unwrap();
-                            match entity {
+                            let item_create_or_update_response = match entity {
                                 "workerPool" => match taskcluster_client.worker_manager.workerPool(item_id).await {
                                     Ok(_remote_item_json_value) => {
                                         // item exists on remote, use update
                                         // todo: skip update if local does not differ from remote
                                         match taskcluster_client.worker_manager.updateWorkerPool(item_id, &local_item_json_value).await {
-                                            Ok(item_update_response) => serde_json::to_writer(std::io::stdout(), &item_update_response).unwrap(),
+                                            Ok(item_update_response) => item_update_response,
                                             Err(item_update_error) => panic!("{} update error: {:?}", entity, item_update_error)
                                         };
                                     },
                                     _ => {
                                         // item does not exist on remote, use create
                                         match taskcluster_client.worker_manager.createWorkerPool(item_id, &local_item_json_value).await {
-                                            Ok(item_create_response) => serde_json::to_writer(std::io::stdout(), &item_create_response).unwrap(),
+                                            Ok(item_create_response) => item_create_response,
                                             Err(item_create_error) => panic!("{} create error: {:?}", entity, item_create_error)
                                         };
                                     },
+                                },
+                                unsupported_entity => panic!("unsupported entity: {}", unsupported_entity)
+                            };
+                            serde_json::to_writer(std::io::stdout(), &item_create_or_update_response).unwrap();
+                            match entity {
+                                "workerPool" => match item_id.splitn(2, '/').collect_tuple() {
+                                    Some((domain, pool)) => {
+                                        let task_definition = json!({
+                                            "created": Utc::now(),
+                                            "deadline": Utc::now() + Duration::hours(1),
+                                            "dependencies": [
+                                                std::env::var("TASK_ID").unwrap()
+                                            ],
+                                            "provisionerId": domain,
+                                            "workerType": pool,
+                                            "priority": "highest",
+                                            "payload": {
+                                                "command": [
+                                                    &format!("echo \"heartbeat from {}\"", item_id),
+                                                ],
+                                                "env": {
+                                                    "GITHUB_HEAD_SHA": std::env::var("GITHUB_HEAD_SHA").unwrap(),
+                                                },
+                                                "maxRunTime": 60,
+                                            },
+                                            "metadata": {
+                                                "name": &format!("02 :: validate {}", item_id),
+                                                "description": &format!("validate task worthiness of {} after pool config mutation", item_id),
+                                                "owner": "relops@mozilla.com",
+                                                "source": "https://github.com/mozilla-platform-ops/cloud-image-deploy/commit/{commit}",
+                                            },
+                                            "schedulerId": "taskcluster-github",
+                                            "taskGroupId": std::env::var("TASK_GROUP_ID").unwrap()
+                                        });
+                                        match taskcluster_client.queue.createTask(&nice(), &task_definition).await {
+                                            Ok(create_task_result) => println!("create_task_result: {:?}", create_task_result),
+                                            Err(create_task_error) => panic!("create_task_error: {:?}", create_task_error),
+                                        };
+                                    },
+                                    None => panic!("failed to parse domain/pool from task queue id")
                                 },
                                 unsupported_entity => panic!("unsupported entity: {}", unsupported_entity)
                             };
@@ -281,6 +327,8 @@ async fn mutate(entity: &str, args: &clap::ArgMatches<'_>) {
                                                                     Some(region) => {
                                                                         zone_config[&serde_yaml::Value::String("launchConfig".into())]["ImageId"] = serde_yaml::to_value(&mutation.machine_image[region]).unwrap();
                                                                         zone_config[&serde_yaml::Value::String("workerConfig".into())]["genericWorker"]["config"]["deploymentId"] = serde_yaml::to_value(&mutation.deployment_id).unwrap();
+                                                                        // older gw versions expected a workerConfig.capacity key. newer gw versions will error out and die if the field exists
+                                                                        match zone_config[&serde_yaml::Value::String("workerConfig".into())].as_mapping_mut().unwrap().remove(&serde_yaml::Value::String("capacity".to_string())) { _ => {} }
                                                                     },
                                                                     None => {}
                                                                 }

@@ -327,8 +327,9 @@ async fn mutate(entity: &str, args: &clap::ArgMatches<'_>) {
                                                                     Some(region) => {
                                                                         zone_config[&serde_yaml::Value::String("launchConfig".into())]["ImageId"] = serde_yaml::to_value(&mutation.machine_image[region]).unwrap();
                                                                         zone_config[&serde_yaml::Value::String("workerConfig".into())]["genericWorker"]["config"]["deploymentId"] = serde_yaml::to_value(&mutation.deployment_id).unwrap();
-                                                                        // older gw versions expected a workerConfig.capacity key. newer gw versions will error out and die if the field exists
-                                                                        match zone_config[&serde_yaml::Value::String("workerConfig".into())].as_mapping_mut().unwrap().remove(&serde_yaml::Value::String("capacity".to_string())) { _ => {} }
+                                                                        // older gw versions expected workerConfig.capacity & workerConfig.genericWorker.config.livelogPUTPort. newer gw versions will error out and die if the fields exist.
+                                                                        match zone_config[&serde_yaml::Value::String("workerConfig".into())]
+                                                                            .as_mapping_mut().unwrap().remove(&serde_yaml::Value::String("capacity".to_string())) { _ => {} }
                                                                         match zone_config[&serde_yaml::Value::String("workerConfig".into())]
                                                                             .as_mapping_mut().unwrap()[&serde_yaml::Value::String("genericWorker".into())]
                                                                             .as_mapping_mut().unwrap()[&serde_yaml::Value::String("config".into())]

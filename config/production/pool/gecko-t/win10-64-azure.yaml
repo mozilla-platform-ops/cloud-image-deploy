@@ -43,6 +43,7 @@ config:
                     workerLocation: '{"cloud":"azure","region":"eastus","availabilityZone":"eastus"}'
                     cleanUpTaskDirs: true
                     idleTimeoutSecs: 90
+                    livelogPortBase: 60098
                     livelogExecutable: C:\generic-worker\livelog.exe
                     numberOfTasksToRun: 0
                     runAfterUserCreation: C:\generic-worker\task-user-init.cmd
@@ -106,6 +107,7 @@ config:
                     workerLocation: '{\"cloud\":\"azure\",\"region\":\"centralus\",\"availabilityZone\":\"centralus\"}'
                     cleanUpTaskDirs: true
                     idleTimeoutSecs: 90
+                    livelogPortBase: 60098
                     livelogExecutable: C:\generic-worker\livelog.exe
                     numberOfTasksToRun: 0
                     runAfterUserCreation: C:\generic-worker\task-user-init.cmd
@@ -169,6 +171,7 @@ config:
                     workerLocation: '{\"cloud\":\"azure\",\"region\":\"eastus2\",\"availabilityZone\":\"eastus2\"}'
                     cleanUpTaskDirs: true
                     idleTimeoutSecs: 90
+                    livelogPortBase: 60098
                     livelogExecutable: C:\generic-worker\livelog.exe
                     numberOfTasksToRun: 0
                     runAfterUserCreation: C:\generic-worker\task-user-init.cmd
@@ -232,6 +235,7 @@ config:
                     workerLocation: '{\"cloud\":\"azure\",\"region\":\"eastus2\",\"availabilityZone\":\"eastus2\"}'
                     cleanUpTaskDirs: true
                     idleTimeoutSecs: 90
+                    livelogPortBase: 60098
                     livelogExecutable: C:\generic-worker\livelog.exe
                     numberOfTasksToRun: 0
                     runAfterUserCreation: C:\generic-worker\task-user-init.cmd
@@ -295,6 +299,7 @@ config:
                     workerLocation: '{\"cloud\":\"azure\",\"region\":\"eastus2\",\"availabilityZone\":\"eastus2\"}'
                     cleanUpTaskDirs: true
                     idleTimeoutSecs: 90
+                    livelogPortBase: 60098
                     livelogExecutable: C:\generic-worker\livelog.exe
                     numberOfTasksToRun: 0
                     runAfterUserCreation: C:\generic-worker\task-user-init.cmd

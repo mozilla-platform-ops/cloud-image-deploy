@@ -44,6 +44,7 @@ config:
                     workerLocation: '{"cloud":"azure","region":"eastus","availabilityZone":"eastus"}'
                     cleanUpTaskDirs: true
                     idleTimeoutSecs: 90
+                    livelogPortBase: 60098
                     livelogExecutable: C:\generic-worker\livelog.exe
                     numberOfTasksToRun: 0
                     runAfterUserCreation: C:\generic-worker\task-user-init.cmd

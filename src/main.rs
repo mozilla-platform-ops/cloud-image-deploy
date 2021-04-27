@@ -209,11 +209,14 @@ async fn snapshot(entity: &str, args: &clap::ArgMatches<'_>) {
                 println!("processing snapshot {} config: {}...", entity, item_id);
                 let item_yaml_value: serde_yaml::Value = serde_yaml::to_value(item_json_value).unwrap();
                 serde_yaml::to_writer(std::io::stdout(), &item_yaml_value).unwrap();
-                let item_yaml_file_path = format!("{}/{}/{}/{}.yml", snapshot_folder, TASKCLUSTER_DEPLOYMENTS[taskcluster_root_url], entity, item_id);
-                std::fs::create_dir_all(std::path::Path::new(&item_yaml_file_path).parent().unwrap()).unwrap();
-                match File::create(item_yaml_file_path) {
-                    Ok(item_yaml_file) => serde_yaml::to_writer(item_yaml_file, &item_yaml_value).unwrap(),
-                    Err(create_item_yaml_file_error) => println!("create {} yaml file error: {:?}", entity, create_item_yaml_file_error)
+                let item_snapshot_yaml_file_path = format!("{}/{}/{}/{}.yml", snapshot_folder, TASKCLUSTER_DEPLOYMENTS[taskcluster_root_url], entity, item_id);
+                std::fs::create_dir_all(std::path::Path::new(&item_snapshot_yaml_file_path).parent().unwrap()).unwrap();
+                match File::create(&item_snapshot_yaml_file_path) {
+                    Ok(item_snapshot_yaml_file) => match serde_yaml::to_writer(item_snapshot_yaml_file, &item_yaml_value) {
+                        Ok(_) => println!("{} snapshot yaml file written to: {}", entity, item_snapshot_yaml_file_path),
+                        Err(write_item_snapshot_yaml_file_error) => println!("write {} snapshot yaml file error: {:?}", entity, write_item_snapshot_yaml_file_error)
+                    },
+                    Err(create_item_snapshot_yaml_file_error) => println!("create {} snapshot yaml file error: {:?}", entity, create_item_snapshot_yaml_file_error)
                 };
             } else {
                 println!("skipping {} snapshot: {}...", entity, item_id);

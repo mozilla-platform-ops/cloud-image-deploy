@@ -15,9 +15,9 @@ config:
       -
         tags:
             workerType: gecko-t-win7-32-azure
-            deploymentId: 6cf4056
+            deploymentId: 2facf4f
             sourceScript: userdata/rundsc.ps1
-            sourceRevision: 6cf4056
+            sourceRevision: 2facf4f
             sourceRepository: OpenCloudConfig
             sourceOrganisation: mozilla-releng
         location: centralus
@@ -45,6 +45,7 @@ config:
                     workerLocation: '{"cloud":"azure","region":"centralus","availabilityZone":"centralus"}'
                     cleanUpTaskDirs: true
                     idleTimeoutSecs: 90
+                    livelogPortBase: 60098
                     livelogExecutable: C:\generic-worker\livelog.exe
                     numberOfTasksToRun: 0
                     runAfterUserCreation: C:\generic-worker\task-user-init.cmd
@@ -87,9 +88,9 @@ config:
       -
         tags:
             workerType: gecko-t-win7-32-azure
-            deploymentId: 6cf4056
+            deploymentId: 2facf4f
             sourceScript: userdata/rundsc.ps1
-            sourceRevision: 6cf4056
+            sourceRevision: 2facf4f
             sourceRepository: OpenCloudConfig
             sourceOrganisation: mozilla-releng
         location: eastus
@@ -117,6 +118,7 @@ config:
                     workerLocation: '{"cloud":"azure","region":"eastus","availabilityZone":"eastus"}'
                     cleanUpTaskDirs: true
                     idleTimeoutSecs: 90
+                    livelogPortBase: 60098
                     livelogExecutable: C:\generic-worker\livelog.exe
                     numberOfTasksToRun: 0
                     runAfterUserCreation: C:\generic-worker\task-user-init.cmd
@@ -159,9 +161,9 @@ config:
       -
         tags:
             workerType: gecko-t-win7-32-azure
-            deploymentId: 6cf4056
+            deploymentId: 2facf4f
             sourceScript: userdata/rundsc.ps1
-            sourceRevision: 6cf4056
+            sourceRevision: 2facf4f
             sourceRepository: OpenCloudConfig
             sourceOrganisation: mozilla-releng
         location: eastus2
@@ -189,6 +191,7 @@ config:
                     workerLocation: '{"cloud":"azure","region":"eastus2","availabilityZone":"eastus2"}'
                     cleanUpTaskDirs: true
                     idleTimeoutSecs: 90
+                    livelogPortBase: 60098
                     livelogExecutable: C:\generic-worker\livelog.exe
                     numberOfTasksToRun: 0
                     runAfterUserCreation: C:\generic-worker\task-user-init.cmd
@@ -231,9 +234,9 @@ config:
       -
         tags:
             workerType: gecko-t-win7-32-azure
-            deploymentId: 6cf4056
+            deploymentId: 2facf4f
             sourceScript: userdata/rundsc.ps1
-            sourceRevision: 6cf4056
+            sourceRevision: 2facf4f
             sourceRepository: OpenCloudConfig
             sourceOrganisation: mozilla-releng
         location: northcentralus
@@ -261,6 +264,7 @@ config:
                     workerLocation: '{"cloud":"azure","region":"northcentralus","availabilityZone":"northcentralus"}'
                     cleanUpTaskDirs: true
                     idleTimeoutSecs: 90
+                    livelogPortBase: 60098
                     livelogExecutable: C:\generic-worker\livelog.exe
                     numberOfTasksToRun: 0
                     runAfterUserCreation: C:\generic-worker\task-user-init.cmd
@@ -303,9 +307,9 @@ config:
       -
         tags:
             workerType: gecko-t-win7-32-azure
-            deploymentId: 6cf4056
+            deploymentId: 2facf4f
             sourceScript: userdata/rundsc.ps1
-            sourceRevision: 6cf4056
+            sourceRevision: 2facf4f
             sourceRepository: OpenCloudConfig
             sourceOrganisation: mozilla-releng
         location: southcentralus
@@ -333,6 +337,7 @@ config:
                     workerLocation: '{"cloud":"azure","region":"southcentralus","availabilityZone":"southcentralus"}'
                     cleanUpTaskDirs: true
                     idleTimeoutSecs: 90
+                    livelogPortBase: 60098
                     livelogExecutable: C:\generic-worker\livelog.exe
                     numberOfTasksToRun: 0
                     runAfterUserCreation: C:\generic-worker\task-user-init.cmd

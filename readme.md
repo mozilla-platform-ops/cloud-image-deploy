@@ -38,21 +38,24 @@ the most useful use case for this implementation is to create or update worker p
 1. create a snapshot of existing taskcluster configurations (if they don't exist, snapshot a similar configuration and modify its filename and contents afterwards):
    ```
    cargo run -- snapshot \
+     #--taskcluster-root-url https://firefox-ci-tc.services.mozilla.com \
      --taskcluster-root-url https://stage.taskcluster.nonprod.cloudops.mozgcp.net \
      --worker-pool-pattern "^gecko-[1t]/[bt]-win(7-32|10-64|2012)-(beta|gpu-b)$"
    ```
 2. mutate the snapshot configurations with regional amis from a specific bootstrap image build sha:
    ```
    cargo run -- mutate \
-     --taskcluster-root-url https://firefox-ci-tc.services.mozilla.com \
+     #--taskcluster-root-url https://firefox-ci-tc.services.mozilla.com \
+     --taskcluster-root-url https://stage.taskcluster.nonprod.cloudops.mozgcp.net \
      --worker-pool-pattern "^gecko-[1t]/[bt]-win(7-32|10-64|2012)-(beta|gpu-b)$" \
-     --build-sha "mozilla-releng/OpenCloudConfig/971519d335bd8c7173cb786546fa95b351e3866a" \
+     --build-sha "mozilla-releng/OpenCloudConfig/20d46de4453f42261568560f63cec8796e1c3a01" \
      --owner grenade@mozilla.com
    ```
 3. deploy the mutated configurations from the deploy folder (use this command locally if you want to test configurations that you are unsure of. if you know the configurations are good, you can just commit and push an updated `/.deploy` folder and let the repo ci run the deploy step):
    ```
    cargo run -- deploy \
-     --taskcluster-root-url https://firefox-ci-tc.services.mozilla.com \
+     #--taskcluster-root-url https://firefox-ci-tc.services.mozilla.com \
+     --taskcluster-root-url https://stage.taskcluster.nonprod.cloudops.mozgcp.net \
      --worker-pool-pattern "^gecko-[1t]/[bt]-win(7-32|10-64|2012)-(beta|gpu-b)$"
    ```
 
@@ -99,7 +102,7 @@ these steps only apply to running cloud-image-deploy locally. if you push modifi
       worker-manager:manage-worker-pool:gecko-1/win*
       worker-manager:manage-worker-pool:gecko-3/win*
       worker-manager:manage-worker-pool:gecko-t/win*
-      worker-manager:provider:azure
+      worker-manager:provider:az*
       ```
 * create `config/taskcluster-client-options.yml` using `config/taskcluster-client-options-example.yml` as a template
 

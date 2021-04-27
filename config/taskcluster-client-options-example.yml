@@ -16,4 +16,4 @@ staging:
 
 # for example:
 # worker-manager:manage-worker-pool:gecko-t/win*
-# worker-manager:provider:azure
+# worker-manager:provider:az*

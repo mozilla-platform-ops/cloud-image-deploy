@@ -98,7 +98,7 @@ createTask(
         'worker-manager:manage-worker-pool:gecko-t/t-win*',
         'worker-manager:manage-worker-pool:gecko-t/win*',
         'worker-manager:provider:aws',
-        'worker-manager:provider:azure',
+        'worker-manager:provider:az*',
     ],
     taskGroupId = taskGroupId
 )

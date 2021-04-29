@@ -124,6 +124,23 @@ async fn deploy(entity: &str, args: &clap::ArgMatches<'_>) {
                                         };
                                     },
                                 },
+                                "role" => match taskcluster_client.auth.role(item_id).await {
+                                    Ok(_remote_item_json_value) => {
+                                        // item exists on remote, use update
+                                        // todo: skip update if local does not differ from remote
+                                        match taskcluster_client.auth.updateRole(item_id, &local_item_json_value).await {
+                                            Ok(item_update_response) => item_update_response,
+                                            Err(item_update_error) => panic!("{} update error: {:?}", entity, item_update_error)
+                                        };
+                                    },
+                                    _ => {
+                                        // item does not exist on remote, use create
+                                        match taskcluster_client.auth.createRole(item_id, &local_item_json_value).await {
+                                            Ok(item_create_response) => item_create_response,
+                                            Err(item_create_error) => panic!("{} create error: {:?}", entity, item_create_error)
+                                        };
+                                    },
+                                },
                                 unsupported_entity => panic!("unsupported entity: {}", unsupported_entity)
                             };
                             serde_json::to_writer(std::io::stdout(), &item_create_or_update_response).unwrap();
@@ -164,6 +181,7 @@ async fn deploy(entity: &str, args: &clap::ArgMatches<'_>) {
                                     },
                                     None => panic!("failed to parse domain/pool from task queue id")
                                 },
+                                "role" => println!("no validation routine implemented for : {}", &entity),
                                 unsupported_entity => panic!("unsupported entity: {}", unsupported_entity)
                             };
                         } else {

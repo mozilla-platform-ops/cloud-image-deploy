@@ -1,0 +1,7 @@
+---
+description: |+
+    ## gecko-1/b-win2012-beta
+    ### production
+scopes:
+    - auth:sentry:generic-worker
+    - auth:websocktunnel-token:firefoxcitc/*

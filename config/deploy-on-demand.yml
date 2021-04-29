@@ -6,6 +6,10 @@ production:
         - repo:github.com/mozilla-platform-ops/cloud-image-builder:branch:main
         - repo:github.com/mozilla-platform-ops/cloud-image-deploy:branch:main
         - worker-pool:relops-3/decision
+        - worker-pool:gecko-t/t-win10-64-beta
+        - worker-pool:gecko-t/t-win10-64-gpu-b
+        - worker-pool:gecko-t/t-win7-32-beta
+        - worker-pool:gecko-t/t-win7-32-gpu-b
     pool:
         gecko-t:
             - win7-32-azure

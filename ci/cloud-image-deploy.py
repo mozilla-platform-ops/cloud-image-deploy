@@ -89,6 +89,12 @@ createTask(
         #'index.project.relops.cloud-image-deploy.{}.{}.latest'.format(platform, key)
     ],
     scopes = [
+        'auth:create-role:worker-pool:gecko-1/b-win*',
+        'auth:create-role:worker-pool:gecko-1/win*',
+        'auth:create-role:worker-pool:gecko-t/t-win*',
+        'auth:create-role:worker-pool:gecko-t/win*',
+        'auth:sentry:generic-worker',
+        'auth:websocktunnel-token:firefoxcitc/*',
         'queue:create-task:highest:gecko-1/b-win*',
         'queue:create-task:highest:gecko-1/win*',
         'queue:create-task:highest:gecko-t/t-win*',

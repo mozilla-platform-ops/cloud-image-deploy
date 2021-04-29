@@ -80,6 +80,7 @@ createTask(
                 'cargo run --',
                 'deploy',
                 '--worker-pool-pattern "^(relops.*|(gecko|mpd001)-[1-3t]/([bt]-)?win.*)$"',
+                '--role-pattern "^worker-pool:gecko-[1t]/[bt]-win(2012|10-64|7-32)-(beta|gpu-b)$"',
             ]),
         ])
     ],

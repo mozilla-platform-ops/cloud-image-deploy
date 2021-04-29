@@ -37,7 +37,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -89,7 +89,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -141,7 +141,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -193,7 +193,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -245,7 +245,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -297,7 +297,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -349,7 +349,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -401,7 +401,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -453,7 +453,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -505,7 +505,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -557,7 +557,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -609,7 +609,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -661,7 +661,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -713,7 +713,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -765,7 +765,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -817,7 +817,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -869,7 +869,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -921,7 +921,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -973,7 +973,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -1025,7 +1025,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -1077,7 +1077,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -1129,7 +1129,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -1181,7 +1181,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -1233,7 +1233,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -1285,7 +1285,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -1337,7 +1337,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90
@@ -1389,7 +1389,7 @@ config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
             deploymentId: 20d46de
-            disableReboots: true
+            disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
             idleTimeoutSecs: 90

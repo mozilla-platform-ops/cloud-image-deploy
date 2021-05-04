@@ -182,7 +182,7 @@ async fn deploy(entity: &str, args: &clap::ArgMatches<'_>) {
                                     None => panic!("failed to parse domain/pool from task queue id")
                                 },
                                 "role" => {
-                                    println!("no validation routine implemented for : {}", &entity);
+                                    println!("no validation routine implemented for: {}", &entity);
                                 },
                                 unsupported_entity => panic!("unsupported entity: {}", unsupported_entity)
                             };

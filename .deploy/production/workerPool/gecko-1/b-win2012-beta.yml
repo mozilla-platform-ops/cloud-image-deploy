@@ -46,7 +46,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -98,7 +98,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -150,7 +150,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -202,7 +202,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -254,7 +254,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -306,7 +306,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -358,7 +358,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -410,7 +410,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -462,7 +462,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -514,7 +514,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -566,7 +566,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -618,7 +618,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -670,7 +670,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -722,7 +722,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -774,7 +774,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -826,7 +826,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -878,7 +878,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -930,7 +930,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -982,7 +982,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -1034,7 +1034,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -1086,7 +1086,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -1138,7 +1138,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -1190,7 +1190,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -1242,7 +1242,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -1294,7 +1294,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -1346,7 +1346,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -1398,7 +1398,7 @@ config:
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80

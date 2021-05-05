@@ -350,8 +350,11 @@ async fn mutate(entity: &str, args: &clap::ArgMatches<'_>) {
                                                                     Some(region) => {
                                                                         zone_config[&serde_yaml::Value::String("launchConfig".into())]["ImageId"] = serde_yaml::to_value(&mutation.machine_image[region]).unwrap();
                                                                         zone_config[&serde_yaml::Value::String("workerConfig".into())]["genericWorker"]["config"]["deploymentId"] = serde_yaml::to_value(&mutation.deployment_id).unwrap();
-                                                                        // when worker runner is used, gw must have ability to reboot instance
+                                                                        // when worker runner is used, gw must have ability to reboot and shut down instance
                                                                         zone_config[&serde_yaml::Value::String("workerConfig".into())]["genericWorker"]["config"]["disableReboots"] = serde_yaml::to_value(false).unwrap();
+                                                                        zone_config[&serde_yaml::Value::String("workerConfig".into())]["genericWorker"]["config"]["idleTimeoutSecs"] = serde_yaml::to_value(90).unwrap();
+                                                                        zone_config[&serde_yaml::Value::String("workerConfig".into())]["genericWorker"]["config"]["shutdownMachineOnIdle"] = serde_yaml::to_value(true).unwrap();
+                                                                        zone_config[&serde_yaml::Value::String("workerConfig".into())]["genericWorker"]["config"]["shutdownMachineOnInternalError"] = serde_yaml::to_value(true).unwrap();
                                                                         // older gw versions expected workerConfig.capacity & workerConfig.genericWorker.config.livelogPUTPort. newer gw versions will error out and die if the fields exist.
                                                                         match zone_config[&serde_yaml::Value::String("workerConfig".into())]
                                                                             .as_mapping_mut().unwrap().remove(&serde_yaml::Value::String("capacity".to_string())) { _ => {} }

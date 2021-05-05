@@ -35,13 +35,13 @@ config:
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1
+            idleTimeoutSecs: 1800
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -82,13 +82,13 @@ config:
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1
+            idleTimeoutSecs: 1800
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -129,13 +129,13 @@ config:
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1
+            idleTimeoutSecs: 1800
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -176,13 +176,13 @@ config:
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1
+            idleTimeoutSecs: 1800
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -223,13 +223,13 @@ config:
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1
+            idleTimeoutSecs: 1800
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -270,13 +270,13 @@ config:
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1
+            idleTimeoutSecs: 1800
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -317,13 +317,13 @@ config:
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1
+            idleTimeoutSecs: 1800
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -364,13 +364,13 @@ config:
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1
+            idleTimeoutSecs: 1800
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -411,13 +411,13 @@ config:
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1
+            idleTimeoutSecs: 1800
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -458,13 +458,13 @@ config:
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1
+            idleTimeoutSecs: 1800
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -505,13 +505,13 @@ config:
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1
+            idleTimeoutSecs: 1800
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -552,13 +552,13 @@ config:
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1
+            idleTimeoutSecs: 1800
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80
@@ -599,13 +599,13 @@ config:
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1
+            idleTimeoutSecs: 1800
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
             runTasksAsCurrentUser: false
             sentryProject: generic-worker
-            shutdownMachineOnIdle: false
+            shutdownMachineOnIdle: true
             shutdownMachineOnInternalError: true
             taskclusterProxyExecutable: "C:\\generic-worker\\taskcluster-proxy.exe"
             taskclusterProxyPort: 80

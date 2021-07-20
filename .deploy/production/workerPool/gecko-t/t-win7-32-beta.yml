@@ -21,7 +21,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-01d22a7b0984c4708
+        ImageId: ami-0dccdd5a6d6209f5f
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -36,11 +36,11 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: 20d46de
+            deploymentId: f1d243c
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1800
+            idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
@@ -73,7 +73,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-01d22a7b0984c4708
+        ImageId: ami-0dccdd5a6d6209f5f
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -88,11 +88,11 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: 20d46de
+            deploymentId: f1d243c
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1800
+            idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
@@ -125,7 +125,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-01d22a7b0984c4708
+        ImageId: ami-0dccdd5a6d6209f5f
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -140,11 +140,11 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: 20d46de
+            deploymentId: f1d243c
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1800
+            idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
@@ -177,7 +177,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-091922793e9efeff4
+        ImageId: ami-0e61cc35983711ad1
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -192,11 +192,11 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: 20d46de
+            deploymentId: f1d243c
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1800
+            idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
@@ -229,7 +229,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-091922793e9efeff4
+        ImageId: ami-0e61cc35983711ad1
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -244,11 +244,11 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: 20d46de
+            deploymentId: f1d243c
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1800
+            idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
@@ -281,7 +281,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-091922793e9efeff4
+        ImageId: ami-0e61cc35983711ad1
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -296,11 +296,11 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: 20d46de
+            deploymentId: f1d243c
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1800
+            idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
@@ -333,7 +333,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-091922793e9efeff4
+        ImageId: ami-0e61cc35983711ad1
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -348,11 +348,11 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: 20d46de
+            deploymentId: f1d243c
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1800
+            idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
@@ -385,7 +385,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-091922793e9efeff4
+        ImageId: ami-0e61cc35983711ad1
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -400,11 +400,11 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: 20d46de
+            deploymentId: f1d243c
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1800
+            idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
@@ -437,7 +437,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-091922793e9efeff4
+        ImageId: ami-0e61cc35983711ad1
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -452,11 +452,11 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: 20d46de
+            deploymentId: f1d243c
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1800
+            idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
@@ -489,7 +489,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-082edcac46c31f467
+        ImageId: ami-067e34bcd46a744b2
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -504,11 +504,11 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: 20d46de
+            deploymentId: f1d243c
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1800
+            idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
@@ -541,7 +541,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-082edcac46c31f467
+        ImageId: ami-067e34bcd46a744b2
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -556,11 +556,11 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: 20d46de
+            deploymentId: f1d243c
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1800
+            idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
@@ -593,7 +593,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-01dc32975cedc4a2f
+        ImageId: ami-0df07d52791b9476f
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -608,11 +608,11 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: 20d46de
+            deploymentId: f1d243c
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1800
+            idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
@@ -645,7 +645,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-01dc32975cedc4a2f
+        ImageId: ami-0df07d52791b9476f
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -660,11 +660,11 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: 20d46de
+            deploymentId: f1d243c
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1800
+            idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"
@@ -697,7 +697,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-01dc32975cedc4a2f
+        ImageId: ami-0df07d52791b9476f
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -712,11 +712,11 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: 20d46de
+            deploymentId: f1d243c
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
-            idleTimeoutSecs: 1800
+            idleTimeoutSecs: 90
             livelogExecutable: "C:\\generic-worker\\livelog.exe"
             numberOfTasksToRun: 0
             runAfterUserCreation: "C:\\generic-worker\\task-user-init.cmd"

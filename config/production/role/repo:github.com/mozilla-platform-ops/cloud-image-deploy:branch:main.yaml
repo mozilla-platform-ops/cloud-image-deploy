@@ -33,6 +33,7 @@ scopes:
     - queue:scheduler-id:taskcluster-github
     - secrets:get:project/relops/image-builder*
     - secrets:get:project/relops/image-deploy*
+    - secrets:get:project/relops/verify/*
     - worker-manager:manage-worker-pool:gecko-1/b-win*
     - worker-manager:manage-worker-pool:gecko-1/win*
     - worker-manager:manage-worker-pool:gecko-3/b-win*

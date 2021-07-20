@@ -104,6 +104,7 @@ createTask(
         'queue:create-task:highest:gecko-t/t-win*',
         'queue:create-task:highest:gecko-t/win*',
         'queue:scheduler-id:taskcluster-github',
+        'secrets:get:project/relops/verify/*',
         'worker-manager:manage-worker-pool:gecko-1/b-win*',
         'worker-manager:manage-worker-pool:gecko-1/win*',
         'worker-manager:manage-worker-pool:gecko-t/t-win*',

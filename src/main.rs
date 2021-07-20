@@ -156,9 +156,16 @@ async fn deploy(entity: &str, args: &clap::ArgMatches<'_>) {
                                             "provisionerId": domain,
                                             "workerType": pool,
                                             "priority": "highest",
+                                            "scopes": [
+                                              &format!("secrets:get:project/relops/verify/{}", item_id),
+                                            ],
                                             "payload": {
+                                                "features": {
+                                                    "taskclusterProxy": true
+                                                },
                                                 "command": [
                                                     &format!("echo \"heartbeat from {}\"", item_id),
+                                                    &format!("curl --silent --no-buffer \"http://taskcluster/secrets/v1/secret/project/relops/verify/{}\"", item_id),
                                                 ],
                                                 "env": {
                                                     "GITHUB_HEAD_SHA": std::env::var("GITHUB_HEAD_SHA").unwrap(),
@@ -167,7 +174,7 @@ async fn deploy(entity: &str, args: &clap::ArgMatches<'_>) {
                                             },
                                             "metadata": {
                                                 "name": &format!("02 :: validate {}", item_id),
-                                                "description": &format!("validate task worthiness of {} after pool config mutation", item_id),
+                                                "description": &format!("validate task claim and scope assignment for {} after pool config mutation", item_id),
                                                 "owner": "relops@mozilla.com",
                                                 "source": &format!("https://github.com/mozilla-platform-ops/cloud-image-deploy/commit/{}", std::env::var("GITHUB_HEAD_SHA").unwrap()),
                                             },

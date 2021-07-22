@@ -165,7 +165,7 @@ async fn deploy(entity: &str, args: &clap::ArgMatches<'_>) {
                                                 },
                                                 "command": [
                                                     &format!("echo \"heartbeat from {}\"", item_id),
-                                                    &format!("curl --silent --no-buffer \"http://taskcluster/secrets/v1/secret/project/relops/verify/{}\"", item_id),
+                                                    &format!("wget -qO - http://taskcluster/secrets/v1/secret/project/relops/verify/{}", item_id),
                                                 ],
                                                 "env": {
                                                     "GITHUB_HEAD_SHA": std::env::var("GITHUB_HEAD_SHA").unwrap(),

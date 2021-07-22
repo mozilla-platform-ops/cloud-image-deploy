@@ -165,8 +165,9 @@ async fn deploy(entity: &str, args: &clap::ArgMatches<'_>) {
                                                 },
                                                 "command": [
                                                     &format!("echo \"heartbeat from {}\"", item_id),
-                                                    &format!("wget -O secret.json http://taskcluster/secrets/v1/secret/project/relops/verify/{}", item_id),
-                                                    "type secret.json",
+                                                    "type C:\\Windows\\System32\\drivers\\etc\\hosts",
+                                                    &format!("wget -O verify-proxy-and-secrets-access.json http://taskcluster/secrets/v1/secret/project/relops/verify/{}", item_id),
+                                                    "type verify-proxy-and-secrets-access.json",
                                                 ],
                                                 "env": {
                                                     "GITHUB_HEAD_SHA": std::env::var("GITHUB_HEAD_SHA").unwrap(),

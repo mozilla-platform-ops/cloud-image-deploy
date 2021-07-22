@@ -21,7 +21,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-0dccdd5a6d6209f5f
+        ImageId: ami-07a004e8fbaf77dab
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -36,7 +36,7 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: f1d243c
+            deploymentId: db48e8f
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
@@ -73,7 +73,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-0dccdd5a6d6209f5f
+        ImageId: ami-07a004e8fbaf77dab
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -88,7 +88,7 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: f1d243c
+            deploymentId: db48e8f
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
@@ -125,7 +125,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-0dccdd5a6d6209f5f
+        ImageId: ami-07a004e8fbaf77dab
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -140,7 +140,7 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: f1d243c
+            deploymentId: db48e8f
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
@@ -177,7 +177,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-0e61cc35983711ad1
+        ImageId: ami-05c16e5a0254dd888
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -192,7 +192,7 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: f1d243c
+            deploymentId: db48e8f
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
@@ -229,7 +229,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-0e61cc35983711ad1
+        ImageId: ami-05c16e5a0254dd888
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -244,7 +244,7 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: f1d243c
+            deploymentId: db48e8f
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
@@ -281,7 +281,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-0e61cc35983711ad1
+        ImageId: ami-05c16e5a0254dd888
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -296,7 +296,7 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: f1d243c
+            deploymentId: db48e8f
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
@@ -333,7 +333,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-0e61cc35983711ad1
+        ImageId: ami-05c16e5a0254dd888
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -348,7 +348,7 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: f1d243c
+            deploymentId: db48e8f
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
@@ -385,7 +385,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-0e61cc35983711ad1
+        ImageId: ami-05c16e5a0254dd888
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -400,7 +400,7 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: f1d243c
+            deploymentId: db48e8f
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
@@ -437,7 +437,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-0e61cc35983711ad1
+        ImageId: ami-05c16e5a0254dd888
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -452,7 +452,7 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: f1d243c
+            deploymentId: db48e8f
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
@@ -489,7 +489,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-067e34bcd46a744b2
+        ImageId: ami-09a1ed58bed17a33f
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -504,7 +504,7 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: f1d243c
+            deploymentId: db48e8f
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
@@ -541,7 +541,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-067e34bcd46a744b2
+        ImageId: ami-09a1ed58bed17a33f
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -556,7 +556,7 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: f1d243c
+            deploymentId: db48e8f
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
@@ -593,7 +593,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-0df07d52791b9476f
+        ImageId: ami-0cbd97eba2bf41e8a
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -608,7 +608,7 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: f1d243c
+            deploymentId: db48e8f
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
@@ -645,7 +645,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-0df07d52791b9476f
+        ImageId: ami-0cbd97eba2bf41e8a
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -660,7 +660,7 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: f1d243c
+            deploymentId: db48e8f
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"
@@ -697,7 +697,7 @@ config:
               DeleteOnTermination: true
               VolumeSize: 120
               VolumeType: gp2
-        ImageId: ami-0df07d52791b9476f
+        ImageId: ami-0cbd97eba2bf41e8a
         InstanceMarketOptions:
           MarketType: spot
         InstanceType: c4.2xlarge
@@ -712,7 +712,7 @@ config:
           config:
             cachesDir: "Z:\\caches"
             cleanUpTaskDirs: true
-            deploymentId: f1d243c
+            deploymentId: db48e8f
             disableReboots: false
             downloadsDir: "Z:\\downloads"
             ed25519SigningKeyLocation: "C:\\generic-worker\\ed25519-private.key"

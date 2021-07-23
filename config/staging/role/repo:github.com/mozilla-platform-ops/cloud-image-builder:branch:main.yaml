@@ -9,6 +9,10 @@ scopes:
     - generic-worker:run-as-administrator:relops-3/*
     - queue:create-task:highest:gecko-1/b-win*
     - queue:create-task:highest:gecko-1/win*
+    - queue:create-task:highest:gecko-2/b-win*
+    - queue:create-task:highest:gecko-2/win*
+    - queue:create-task:highest:gecko-3/b-win*
+    - queue:create-task:highest:gecko-3/win*
     - queue:create-task:highest:gecko-t/t-win*
     - queue:create-task:highest:gecko-t/win*
     - queue:create-task:highest:relops-3/*

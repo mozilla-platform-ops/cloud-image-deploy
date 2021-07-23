@@ -24,6 +24,8 @@ scopes:
     - generic-worker:run-as-administrator:*
     - queue:create-task:highest:gecko-1/b-win*
     - queue:create-task:highest:gecko-1/win*
+    - queue:create-task:highest:gecko-2/b-win*
+    - queue:create-task:highest:gecko-2/win*
     - queue:create-task:highest:gecko-3/b-win*
     - queue:create-task:highest:gecko-3/win*
     - queue:create-task:highest:gecko-t/t-win*

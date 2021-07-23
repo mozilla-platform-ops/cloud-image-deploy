@@ -100,7 +100,11 @@ these steps only apply to running cloud-image-deploy locally. if you push modifi
   * for example:
       ```
       worker-manager:manage-worker-pool:gecko-1/win*
+      worker-manager:manage-worker-pool:gecko-1/b-win*
+      worker-manager:manage-worker-pool:gecko-2/win*
+      worker-manager:manage-worker-pool:gecko-2/b-win*
       worker-manager:manage-worker-pool:gecko-3/win*
+      worker-manager:manage-worker-pool:gecko-3/b-win*
       worker-manager:manage-worker-pool:gecko-t/win*
       worker-manager:provider:az*
       ```

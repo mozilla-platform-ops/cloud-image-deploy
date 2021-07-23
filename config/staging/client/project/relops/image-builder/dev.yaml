@@ -26,7 +26,11 @@ scopes:
   - queue:scheduler-id:taskcluster-github
   - secrets:get:project/relops/image-builder/dev
   - worker-manager:manage-worker-pool:gecko-1/win*
+  - worker-manager:manage-worker-pool:gecko-1/b-win*
+  - worker-manager:manage-worker-pool:gecko-2/win*
+  - worker-manager:manage-worker-pool:gecko-2/b-win*
   - worker-manager:manage-worker-pool:gecko-3/win*
+  - worker-manager:manage-worker-pool:gecko-3/b-win*
   - worker-manager:manage-worker-pool:gecko-t/win*
   - worker-manager:manage-worker-pool:mpd001-1/win*
   - worker-manager:manage-worker-pool:mpd001-3/win*

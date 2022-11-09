@@ -36,7 +36,7 @@ createTask(
     maxRunMinutes = 10,
     retries = 2,
     provisioner = 'relops-3',
-    workerType = 'decision',
+    workerType = 'decision-gcp',
     priority = 'high',
     features = {
         'taskclusterProxy': True
